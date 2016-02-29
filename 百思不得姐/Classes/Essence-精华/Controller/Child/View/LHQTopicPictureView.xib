@@ -40,6 +40,14 @@
                         <action selector="seeBigButtonClick" destination="iN0-l3-epB" eventType="touchUpInside" id="gKv-CF-vU8"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ebU-eB-Jwf" userLabel="进度指示器" customClass="MRCircularProgressView">
+                    <rect key="frame" x="133" y="101" width="100" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="Ou5-6l-UgW"/>
+                        <constraint firstAttribute="height" constant="100" id="vPx-RB-RjX"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87058823529411766" alpha="0.90762392241379308" colorSpace="calibratedRGB"/>
             <constraints>
@@ -48,11 +56,13 @@
                 <constraint firstItem="iuh-io-n6b" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="64K-gW-ly5"/>
                 <constraint firstItem="2cj-gx-FX7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9p9-oG-CYb"/>
                 <constraint firstItem="L5Q-S1-5eD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Acy-08-RXP"/>
+                <constraint firstItem="ebU-eB-Jwf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ICa-4h-IfO"/>
                 <constraint firstItem="IGn-wD-ZBK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LFp-C5-iZl"/>
                 <constraint firstItem="L5Q-S1-5eD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="LJW-Rm-ZSs"/>
                 <constraint firstItem="iuh-io-n6b" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="PC7-lF-4zU"/>
                 <constraint firstAttribute="trailing" secondItem="2cj-gx-FX7" secondAttribute="trailing" id="PXE-QZ-HIf"/>
                 <constraint firstAttribute="bottom" secondItem="IGn-wD-ZBK" secondAttribute="bottom" id="ZKr-Jg-bnm"/>
+                <constraint firstItem="ebU-eB-Jwf" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="fXv-bF-cqQ"/>
                 <constraint firstAttribute="trailing" secondItem="IGn-wD-ZBK" secondAttribute="trailing" id="v6f-gh-SR9"/>
                 <constraint firstAttribute="bottom" secondItem="iuh-io-n6b" secondAttribute="bottom" id="ywl-Yn-lqU"/>
             </constraints>
@@ -61,6 +71,7 @@
             <connections>
                 <outlet property="gifImageView" destination="L5Q-S1-5eD" id="98e-9U-bck"/>
                 <outlet property="imageView" destination="iuh-io-n6b" id="ZR2-vG-JQ9"/>
+                <outlet property="progressView" destination="ebU-eB-Jwf" id="4ud-aj-bfC"/>
                 <outlet property="seeBigButton" destination="IGn-wD-ZBK" id="UkS-BN-3yX"/>
             </connections>
             <point key="canvasLocation" x="255.5" y="407"/>

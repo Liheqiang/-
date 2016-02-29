@@ -167,8 +167,7 @@ static NSString *const cellId = @"topic";
 #pragma mark --- table view delegate ---
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    LHQBaseTopicCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    LHQLog(@"cell.height == %f",cell.frame.size.height);
+ 
     
 }
 
