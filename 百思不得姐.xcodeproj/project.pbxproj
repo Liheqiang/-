@@ -46,6 +46,8 @@
 		DB7EC05E1C75B0500012AD13 /* LHQVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EC0561C75B0500012AD13 /* LHQVideoViewController.m */; };
 		DB7EC05F1C75B0500012AD13 /* LHQVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EC0581C75B0500012AD13 /* LHQVoiceViewController.m */; };
 		DBCDD1881C84525700F1452C /* LHQProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCDD1871C84525700F1452C /* LHQProgressView.m */; };
+		DBCDD18C1C84543C00F1452C /* LHQShowPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCDD18A1C84543C00F1452C /* LHQShowPictureViewController.m */; };
+		DBCDD18D1C84543C00F1452C /* LHQShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBCDD18B1C84543C00F1452C /* LHQShowPictureViewController.xib */; };
 		DBD4BF851C70142200687B65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD4BF611C70142200687B65 /* AppDelegate.m */; };
 		DBD4BF861C70142200687B65 /* LHQEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD4BF651C70142200687B65 /* LHQEssenceViewController.m */; };
 		DBD4BF871C70142200687B65 /* LHQFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD4BF6B1C70142200687B65 /* LHQFriendTrendsViewController.m */; };
@@ -126,6 +128,9 @@
 		DB7EC0581C75B0500012AD13 /* LHQVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQVoiceViewController.m; sourceTree = "<group>"; };
 		DBCDD1861C84525700F1452C /* LHQProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQProgressView.h; sourceTree = "<group>"; };
 		DBCDD1871C84525700F1452C /* LHQProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQProgressView.m; sourceTree = "<group>"; };
+		DBCDD1891C84543C00F1452C /* LHQShowPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQShowPictureViewController.h; sourceTree = "<group>"; };
+		DBCDD18A1C84543C00F1452C /* LHQShowPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQShowPictureViewController.m; sourceTree = "<group>"; };
+		DBCDD18B1C84543C00F1452C /* LHQShowPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LHQShowPictureViewController.xib; sourceTree = "<group>"; };
 		DBD4BF601C70142200687B65 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DBD4BF611C70142200687B65 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DBD4BF641C70142200687B65 /* LHQEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQEssenceViewController.h; sourceTree = "<group>"; };
@@ -253,6 +258,9 @@
 				DB7EC0521C75B0500012AD13 /* LHQPictureViewController.m */,
 				DB6B2D601C7FEBF800B39E24 /* LHQWordViewController.h */,
 				DB6B2D611C7FEBF800B39E24 /* LHQWordViewController.m */,
+				DBCDD1891C84543C00F1452C /* LHQShowPictureViewController.h */,
+				DBCDD18A1C84543C00F1452C /* LHQShowPictureViewController.m */,
+				DBCDD18B1C84543C00F1452C /* LHQShowPictureViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -581,6 +589,7 @@
 			files = (
 				DB6FBC9A1C7171AE00FD12B5 /* LHQRecommandUserCell.xib in Resources */,
 				DB7EC0031C736D590012AD13 /* LHQRecommandTagCell.xib in Resources */,
+				DBCDD18D1C84543C00F1452C /* LHQShowPictureViewController.xib in Resources */,
 				DB6FBC901C716D9100FD12B5 /* LHQRecommandViewController.xib in Resources */,
 				DB7EC03D1C755D390012AD13 /* LHQPushGuideView.xib in Resources */,
 				DB6B2D671C7FEC2700B39E24 /* LHQBaseTopicCell.xib in Resources */,
@@ -650,6 +659,7 @@
 				DB6FBC861C701BB500FD12B5 /* UIBarButtonItem+LHQExtension.m in Sources */,
 				DB7EBFFB1C736C130012AD13 /* LHQRecommandTagsViewController.m in Sources */,
 				DBD4BF871C70142200687B65 /* LHQFriendTrendsViewController.m in Sources */,
+				DBCDD18C1C84543C00F1452C /* LHQShowPictureViewController.m in Sources */,
 				DB7EC05C1C75B0500012AD13 /* LHQPictureViewController.m in Sources */,
 				DBCDD1881C84525700F1452C /* LHQProgressView.m in Sources */,
 				DB6B2D701C83E11D00B39E24 /* LHQTopicPictureView.m in Sources */,

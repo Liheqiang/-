@@ -13,13 +13,13 @@
 #import "LHQTopic.h"
 #import <UIImageView+WebCache.h>
 #import "LHQProgressView.h"
+#import "LHQShowPictureViewController.h"
 
 @interface LHQTopicPictureView()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIImageView *gifImageView;
 @property (weak, nonatomic) IBOutlet UIButton *seeBigButton;
 @property (weak, nonatomic) IBOutlet MRCircularProgressView *progressView;
-
 
 @end
 @implementation LHQTopicPictureView
@@ -32,11 +32,23 @@
 - (void)awakeFromNib{
     
     self.autoresizingMask = UIViewAutoresizingNone;//如果发现图片明明设置为固定尺寸，但是实际显示是拉伸的，那可能是因为这个属性，因为，我们重写了cell的frame方法，改变了尺寸
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
+    [self.imageView addGestureRecognizer:tap];
+}
+
+- (void)tap{
+   
+    LHQShowPictureViewController *showVc = [[LHQShowPictureViewController alloc] init];
+    showVc.topic = self.topic;
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:showVc animated:YES completion:nil];
+    
+    
 }
 
 - (void)setTopic:(LHQTopic *)topic{
     _topic = topic;
     
+    [self.progressView setProgress:topic.pictureProgress animated:YES];
     WeakSelf
     //SDWeb如果发现是gif图片，会调用内部imageIO 然后将gif图片转为N个图片，进行播放 animationImages
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.bigImageUrl] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
@@ -45,8 +57,8 @@
         CGFloat progressValue = (double)receivedSize / expectedSize;
         NSString *progress = [NSString stringWithFormat:@"%f",progressValue];
         progress = [progress stringByReplacingOccurrencesOfString:@"-" withString:@""];//替换负值的情况
-        
-        [weakSelf.progressView setProgress:[progress integerValue] animated:YES];
+        topic.pictureProgress = [progress integerValue];
+        [weakSelf.progressView setProgress:topic.pictureProgress animated:YES];
         
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         weakSelf.progressView.hidden = YES;

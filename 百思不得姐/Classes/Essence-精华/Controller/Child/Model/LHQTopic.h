@@ -50,4 +50,5 @@
 @property (nonatomic, assign ,readonly) CGFloat cellHeight;
 @property (nonatomic, assign ,readonly) CGRect pictureF;
 @property (nonatomic, assign ,getter=isBigPicture) BOOL bigPicture;
+@property (nonatomic, assign) CGFloat pictureProgress;
 @end
