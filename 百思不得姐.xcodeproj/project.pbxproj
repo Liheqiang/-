@@ -45,6 +45,7 @@
 		DB7EC05C1C75B0500012AD13 /* LHQPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EC0521C75B0500012AD13 /* LHQPictureViewController.m */; };
 		DB7EC05E1C75B0500012AD13 /* LHQVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EC0561C75B0500012AD13 /* LHQVideoViewController.m */; };
 		DB7EC05F1C75B0500012AD13 /* LHQVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EC0581C75B0500012AD13 /* LHQVoiceViewController.m */; };
+		DBCDD1881C84525700F1452C /* LHQProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCDD1871C84525700F1452C /* LHQProgressView.m */; };
 		DBD4BF851C70142200687B65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD4BF611C70142200687B65 /* AppDelegate.m */; };
 		DBD4BF861C70142200687B65 /* LHQEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD4BF651C70142200687B65 /* LHQEssenceViewController.m */; };
 		DBD4BF871C70142200687B65 /* LHQFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD4BF6B1C70142200687B65 /* LHQFriendTrendsViewController.m */; };
@@ -123,6 +124,8 @@
 		DB7EC0561C75B0500012AD13 /* LHQVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQVideoViewController.m; sourceTree = "<group>"; };
 		DB7EC0571C75B0500012AD13 /* LHQVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQVoiceViewController.h; sourceTree = "<group>"; };
 		DB7EC0581C75B0500012AD13 /* LHQVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQVoiceViewController.m; sourceTree = "<group>"; };
+		DBCDD1861C84525700F1452C /* LHQProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQProgressView.h; sourceTree = "<group>"; };
+		DBCDD1871C84525700F1452C /* LHQProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQProgressView.m; sourceTree = "<group>"; };
 		DBD4BF601C70142200687B65 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DBD4BF611C70142200687B65 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DBD4BF641C70142200687B65 /* LHQEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQEssenceViewController.h; sourceTree = "<group>"; };
@@ -272,6 +275,8 @@
 				DB6B2D6E1C83E11D00B39E24 /* LHQTopicPictureView.h */,
 				DB6B2D6F1C83E11D00B39E24 /* LHQTopicPictureView.m */,
 				DB6B2D711C83E13400B39E24 /* LHQTopicPictureView.xib */,
+				DBCDD1861C84525700F1452C /* LHQProgressView.h */,
+				DBCDD1871C84525700F1452C /* LHQProgressView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -646,6 +651,7 @@
 				DB7EBFFB1C736C130012AD13 /* LHQRecommandTagsViewController.m in Sources */,
 				DBD4BF871C70142200687B65 /* LHQFriendTrendsViewController.m in Sources */,
 				DB7EC05C1C75B0500012AD13 /* LHQPictureViewController.m in Sources */,
+				DBCDD1881C84525700F1452C /* LHQProgressView.m in Sources */,
 				DB6B2D701C83E11D00B39E24 /* LHQTopicPictureView.m in Sources */,
 				DB6B2D1B1C7B3A7400B39E24 /* NSDate+LHQExtension.m in Sources */,
 				DB7EC05B1C75B0500012AD13 /* LHQAllViewController.m in Sources */,

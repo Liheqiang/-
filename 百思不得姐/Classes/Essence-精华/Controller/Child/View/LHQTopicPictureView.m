@@ -12,7 +12,7 @@
 #import "LHQTopicPictureView.h"
 #import "LHQTopic.h"
 #import <UIImageView+WebCache.h>
-#import <MRCircularProgressView.h>
+#import "LHQProgressView.h"
 
 @interface LHQTopicPictureView()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -32,9 +32,6 @@
 - (void)awakeFromNib{
     
     self.autoresizingMask = UIViewAutoresizingNone;//如果发现图片明明设置为固定尺寸，但是实际显示是拉伸的，那可能是因为这个属性，因为，我们重写了cell的frame方法，改变了尺寸
-    self.progressView.borderWidth = 0;
-    self.progressView.lineWidth = 10;
-//    self.progressView.
 }
 
 - (void)setTopic:(LHQTopic *)topic{
@@ -46,8 +43,10 @@
         
         weakSelf.progressView.hidden = NO;//cell的重用
         CGFloat progressValue = (double)receivedSize / expectedSize;
+        NSString *progress = [NSString stringWithFormat:@"%f",progressValue];
+        progress = [progress stringByReplacingOccurrencesOfString:@"-" withString:@""];//替换负值的情况
         
-        [weakSelf.progressView setProgress:progressValue animated:YES];
+        [weakSelf.progressView setProgress:[progress integerValue] animated:YES];
         
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         weakSelf.progressView.hidden = YES;
