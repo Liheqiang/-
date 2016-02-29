@@ -1,0 +1,47 @@
+//
+//  PrefixHeader.pch
+//  百思不得姐
+//
+//  Created by HqLee on 16/2/13.
+//  Copyright © 2016年 HqLee. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIView+LHQExtension.h"
+#import "UIBarButtonItem+LHQExtension.h"
+#import "LHQConstant.h"
+
+#pragma mark --- color ---
+#define LHQRGB(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define LHQGlobalBg LHQRGB(234, 234, 234)
+
+#pragma mark ---  请求的url ---
+#define requestUrl @"http://api.budejie.com/api/api_open.php"
+
+#pragma mark --- 常用的宏 ---
+#define  LHQUserDefault [NSUserDefaults standardUserDefaults]
+#define WeakSelfType __weak __typeof(&*self)
+
+#define WeakSelf WeakSelfType weakSelf = self;
+
+#define kScreenBounds [[UIScreen mainScreen] bounds]
+#define kScreenWidth [[UIScreen mainScreen] bounds].size.width
+#define kScreenHeight [[UIScreen mainScreen] bounds].size.height
+#define kScreenCenter CGPointMake(kScreenWidth / 2, kScreenHeight / 2)
+
+#define LHQLogFun LHQLog(@"%s",__func__);
+
+#pragma mark --- 调试打印 ---
+#ifdef DEBUG
+
+#define LHQLog(...) NSLog(__VA_ARGS__)
+
+#else
+
+#define LHQLog(...)
+
+#endif
+
+#endif /* PrefixHeader_pch */
