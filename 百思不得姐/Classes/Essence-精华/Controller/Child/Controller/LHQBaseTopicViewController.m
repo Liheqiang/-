@@ -14,6 +14,7 @@
 #import <MJRefresh.h>
 #import <SVProgressHUD.h>
 
+
 @interface LHQBaseTopicViewController ()
 
 @property (nonatomic, strong) NSMutableArray *topics;
@@ -73,6 +74,11 @@ static NSString *const cellId = @"topic";
 
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LHQBaseTopicCell class]) bundle:nil] forCellReuseIdentifier:cellId];
     
+    //这个属性非常重要
+    self.tableView.contentInset = UIEdgeInsetsMake(navigationBarHeight + titleViewHeight, 0, self.tabBarController.tabBar.height, 0);
+    //让滚动条的内边距也要和当前视图一样
+    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;//最初设置的是scrollView的，难怪没反应,让滚动视图的指示器也从下面开始
+//    LHQLog(@"%@",NSStringFromUIEdgeInsets(self.tableView.contentInset));
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     self.tableView.backgroundColor = LHQGlobalBg;
@@ -89,6 +95,7 @@ static NSString *const cellId = @"topic";
     [[AFHTTPSessionManager manager]GET:requestUrl parameters:self.params progress:nil
       success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
+          [responseObject writeToFile:@"/Users/HqLee/Desktop/tiezi.plist" atomically:YES];
 //          weakSelf.tableView.header.hidden = YES;
           NSArray *newTopics = [LHQTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
 //          LHQLog(@"%@",responseObject);

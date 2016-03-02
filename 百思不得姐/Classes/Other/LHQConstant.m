@@ -16,3 +16,7 @@ CGFloat const LHQTopicCellBottomViewH = 44.0f;
 CGFloat const LHQTopicPictureMaxH = 1000.0f;
 /** cell 的图片压缩的高度 */
 CGFloat const LHQTopicPictureDealH = 250.0f;
+/** 导航栏高度 */
+CGFloat const navigationBarHeight = 64.0f;
+/** 导航栏底部标题视图高度 */
+CGFloat const titleViewHeight = 30;

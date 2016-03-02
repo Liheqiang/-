@@ -38,7 +38,7 @@
         CGFloat bottomH = LHQTopicCellBottomViewH;//底部工具条的高度
         
         
-        _cellHeight = headerViewY + textLabelH + margin;
+        _cellHeight = headerViewY + textLabelH + 2 * margin;
         
         //图片高度
         if (self.type == LHQTopicTypePicture) {
@@ -74,7 +74,7 @@
             _cellHeight += videoH + margin;
         }
         
-        _cellHeight += 2 * margin + bottomH;
+        _cellHeight += margin + bottomH;
     }
     return _cellHeight;
 }

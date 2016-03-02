@@ -17,11 +17,6 @@
 #import "LHQPictureViewController.h"
 #import "LHQWordViewController.h"
 
-
-static CGFloat const navigationBarHeight = 64.0f;
-
-static CGFloat const titleViewHeight = 40.0f;
-
 //static NSInteger const titleViewSubViewsCount = 5;
 
 @interface LHQEssenceViewController ()<UIScrollViewDelegate>
@@ -216,14 +211,15 @@ static CGFloat const titleViewHeight = 40.0f;
         return;
     }
     
+//    //这个属性非常重要 在这里设置没用，在view Didload中被改回来了
+//    tableViewVc.tableView.contentInset = UIEdgeInsetsMake(navigationBarHeight + titleViewHeight, 0, self.tabBarController.tabBar.height, 0);
+//    //让滚动条的内边距也要和当前视图一样
+//    tableViewVc.tableView.scrollIndicatorInsets = tableViewVc.tableView.contentInset;//最初设置的是scrollView的，难怪没反应,让滚动视图的指示器也从下面开始
+    
     UITableView *tableView = tableViewVc.tableView;
     tableView.x = index * self.contentView.width;
     tableView.y = 0;//设置为0(默认为20)这不是状态栏的高度嘛 ios5，6以前view高度没有状态栏
     tableView.height = scrollView.height;//设置tableView的高度是整个屏幕高度，ios5,6以前是比屏幕少20
-       //这个属性非常重要
-    tableView.contentInset = UIEdgeInsetsMake(navigationBarHeight + titleViewHeight, 0, self.tabBarController.tabBar.height, 0);
-    //让滚动条的内边距也要和当前视图一样
-    tableView.scrollIndicatorInsets = tableView.contentInset;//最初设置的是scrollView的，难怪没反应,让滚动视图的指示器也从下面开始
     [self.contentView addSubview:tableView];
 
 }
