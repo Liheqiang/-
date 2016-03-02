@@ -31,6 +31,10 @@
 		DB6FBC9A1C7171AE00FD12B5 /* LHQRecommandUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6FBC981C7171AE00FD12B5 /* LHQRecommandUserCell.xib */; };
 		DB6FBC9D1C71785C00FD12B5 /* LHQRecommandCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6FBC9C1C71785C00FD12B5 /* LHQRecommandCategory.m */; };
 		DB6FBCA01C71AA0D00FD12B5 /* LHQRecommandUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6FBC9F1C71AA0D00FD12B5 /* LHQRecommandUser.m */; };
+		DB7428C61C868D17000497AA /* LHQTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7428C51C868D17000497AA /* LHQTopicVideoView.m */; };
+		DB7428C81C868D2C000497AA /* LHQTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB7428C71C868D2C000497AA /* LHQTopicVideoView.xib */; };
+		DB7428CB1C868D43000497AA /* LHQTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7428CA1C868D43000497AA /* LHQTopicVoiceView.m */; };
+		DB7428CD1C868D56000497AA /* LHQTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB7428CC1C868D56000497AA /* LHQTopicVoiceView.xib */; };
 		DB7EBFFB1C736C130012AD13 /* LHQRecommandTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EBFFA1C736C130012AD13 /* LHQRecommandTagsViewController.m */; };
 		DB7EBFFE1C736D3F0012AD13 /* LHQRecommandTag.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EBFFD1C736D3F0012AD13 /* LHQRecommandTag.m */; };
 		DB7EC0021C736D590012AD13 /* LHQRecommandTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EC0001C736D590012AD13 /* LHQRecommandTagCell.m */; };
@@ -101,6 +105,12 @@
 		DB6FBC9C1C71785C00FD12B5 /* LHQRecommandCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQRecommandCategory.m; sourceTree = "<group>"; };
 		DB6FBC9E1C71AA0D00FD12B5 /* LHQRecommandUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQRecommandUser.h; sourceTree = "<group>"; };
 		DB6FBC9F1C71AA0D00FD12B5 /* LHQRecommandUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQRecommandUser.m; sourceTree = "<group>"; };
+		DB7428C41C868D17000497AA /* LHQTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQTopicVideoView.h; sourceTree = "<group>"; };
+		DB7428C51C868D17000497AA /* LHQTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQTopicVideoView.m; sourceTree = "<group>"; };
+		DB7428C71C868D2C000497AA /* LHQTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LHQTopicVideoView.xib; sourceTree = "<group>"; };
+		DB7428C91C868D43000497AA /* LHQTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQTopicVoiceView.h; sourceTree = "<group>"; };
+		DB7428CA1C868D43000497AA /* LHQTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQTopicVoiceView.m; sourceTree = "<group>"; };
+		DB7428CC1C868D56000497AA /* LHQTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LHQTopicVoiceView.xib; sourceTree = "<group>"; };
 		DB7EBFF91C736C130012AD13 /* LHQRecommandTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQRecommandTagsViewController.h; sourceTree = "<group>"; };
 		DB7EBFFA1C736C130012AD13 /* LHQRecommandTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQRecommandTagsViewController.m; sourceTree = "<group>"; };
 		DB7EBFFC1C736D3F0012AD13 /* LHQRecommandTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQRecommandTag.h; sourceTree = "<group>"; };
@@ -283,6 +293,12 @@
 				DB6B2D6E1C83E11D00B39E24 /* LHQTopicPictureView.h */,
 				DB6B2D6F1C83E11D00B39E24 /* LHQTopicPictureView.m */,
 				DB6B2D711C83E13400B39E24 /* LHQTopicPictureView.xib */,
+				DB7428C41C868D17000497AA /* LHQTopicVideoView.h */,
+				DB7428C51C868D17000497AA /* LHQTopicVideoView.m */,
+				DB7428C71C868D2C000497AA /* LHQTopicVideoView.xib */,
+				DB7428C91C868D43000497AA /* LHQTopicVoiceView.h */,
+				DB7428CA1C868D43000497AA /* LHQTopicVoiceView.m */,
+				DB7428CC1C868D56000497AA /* LHQTopicVoiceView.xib */,
 				DBCDD1861C84525700F1452C /* LHQProgressView.h */,
 				DBCDD1871C84525700F1452C /* LHQProgressView.m */,
 			);
@@ -587,7 +603,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB7428C81C868D2C000497AA /* LHQTopicVideoView.xib in Resources */,
 				DB6FBC9A1C7171AE00FD12B5 /* LHQRecommandUserCell.xib in Resources */,
+				DB7428CD1C868D56000497AA /* LHQTopicVoiceView.xib in Resources */,
 				DB7EC0031C736D590012AD13 /* LHQRecommandTagCell.xib in Resources */,
 				DBCDD18D1C84543C00F1452C /* LHQShowPictureViewController.xib in Resources */,
 				DB6FBC901C716D9100FD12B5 /* LHQRecommandViewController.xib in Resources */,
@@ -655,6 +673,8 @@
 				DBD4BF881C70142200687B65 /* LHQTabBarController.m in Sources */,
 				DB6FBC891C70205500FD12B5 /* LHQNavigationController.m in Sources */,
 				DB6B2D661C7FEC2700B39E24 /* LHQBaseTopicCell.m in Sources */,
+				DB7428C61C868D17000497AA /* LHQTopicVideoView.m in Sources */,
+				DB7428CB1C868D43000497AA /* LHQTopicVoiceView.m in Sources */,
 				DB6FBCA01C71AA0D00FD12B5 /* LHQRecommandUser.m in Sources */,
 				DB6FBC861C701BB500FD12B5 /* UIBarButtonItem+LHQExtension.m in Sources */,
 				DB7EBFFB1C736C130012AD13 /* LHQRecommandTagsViewController.m in Sources */,

@@ -8,6 +8,8 @@
 
 #import "LHQBaseTopicCell.h"
 #import "LHQTopicPictureView.h"
+#import "LHQTopicVoiceView.h"
+#import "LHQTopicVideoView.h"
 #import "LHQTopic.h"
 #import <UIImageView+WebCache.h>
 
@@ -24,6 +26,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *repostButton;
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
 @property (nonatomic, weak) LHQTopicPictureView *pictureView;
+@property (nonatomic, weak) LHQTopicVoiceView *voiceView;
+@property (nonatomic, weak) LHQTopicVideoView *videoView;
 
 @end
 @implementation LHQBaseTopicCell
@@ -36,6 +40,24 @@
         _pictureView = pictureView;
     }
     return _pictureView;
+}
+
+- (LHQTopicVoiceView *)voiceView{
+    if (_voiceView == nil) {
+        LHQTopicVoiceView *voiceView = [LHQTopicVoiceView voiceView];
+        [self.contentView addSubview:voiceView];
+        _voiceView = voiceView;
+    }
+    return _voiceView;
+}
+
+- (LHQTopicVideoView *)videoView{
+    if (_videoView == nil) {
+        LHQTopicVideoView *videoView = [LHQTopicVideoView videoView];
+        [self.contentView addSubview:videoView];
+        _videoView = videoView;
+    }
+    return _videoView;
 }
 #pragma mark --- life cycle ---
 - (void)awakeFromNib {
@@ -69,6 +91,25 @@
     if (topic.type == LHQTopicTypePicture) {
         self.pictureView.topic = topic;
         self.pictureView.frame = topic.pictureF;
+        self.pictureView.hidden = NO;
+        self.voiceView.hidden = YES;
+        self.videoView.hidden = YES;
+    }else if (topic.type == LHQTopicTypeVoice){
+        self.voiceView.topic = topic;
+        self.voiceView.frame = topic.voiceF;
+        self.voiceView.hidden = NO;
+        self.pictureView.hidden = YES;
+        self.videoView.hidden = YES;
+    }else if (topic.type == LHQTopicTypeVideo){
+        self.videoView.topic = topic;
+        self.videoView.frame = topic.videoF;
+        self.videoView.hidden = NO;
+        self.voiceView.hidden = YES;
+        self.pictureView.hidden = YES;
+    }else{
+        self.pictureView.hidden = YES;
+        self.voiceView.hidden = YES;
+        self.videoView.hidden = YES;
     }
 }
 

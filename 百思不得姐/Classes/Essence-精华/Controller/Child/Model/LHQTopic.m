@@ -55,6 +55,23 @@
             CGFloat pictureY = headerViewY + textLabelH + margin + margin;
             _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
             _cellHeight += pictureH + margin;
+        }else if (self.type == LHQTopicTypeVoice){
+            CGFloat voiceW = maxWidth;
+            CGFloat voiceH = voiceW * self.height / self.width;
+            
+            CGFloat voiceX = LHQTopicCellMargin;
+            CGFloat voiceY = headerViewY + textLabelH + margin + margin;
+            _voiceF = CGRectMake(voiceX, voiceY, voiceW, voiceH);
+            _cellHeight += voiceH + margin;
+            
+        }else if (self.type == LHQTopicTypeVideo){
+            CGFloat videoW = maxWidth;
+            CGFloat videoH = videoW * self.height / self.width;
+            
+            CGFloat videoX = LHQTopicCellMargin;
+            CGFloat videoY = headerViewY + textLabelH + margin + margin;
+            _videoF = CGRectMake(videoX, videoY, videoW, videoH);
+            _cellHeight += videoH + margin;
         }
         
         _cellHeight += 2 * margin + bottomH;

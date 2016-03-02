@@ -45,10 +45,23 @@
 @property (nonatomic, assign) CGFloat width;
 /** 图片的高度 */
 @property (nonatomic, assign) CGFloat height;
+/** 播放时长 */
+@property (nonatomic, assign) NSInteger playcount;
+/** 视频帖子的时长 */
+@property (nonatomic, assign) NSInteger videotime;
+/** 声音帖子的时长 */
+@property (nonatomic, assign) NSInteger voicetime;
 
-//cell的辅助属性
+/** cell的辅助属性 */
 @property (nonatomic, assign ,readonly) CGFloat cellHeight;
+/** 图片帖子的frame */
 @property (nonatomic, assign ,readonly) CGRect pictureF;
+/** 声音帖子的frame */
+@property (nonatomic, assign ,readonly) CGRect voiceF;
+/** 视频帖子的frame */
+@property (nonatomic, assign ,readonly) CGRect videoF;
+/** 是否为大图 */
 @property (nonatomic, assign ,getter=isBigPicture) BOOL bigPicture;
+/** 图片下载进度 */
 @property (nonatomic, assign) CGFloat pictureProgress;
 @end
