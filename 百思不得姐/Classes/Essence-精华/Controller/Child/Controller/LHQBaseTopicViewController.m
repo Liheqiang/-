@@ -7,6 +7,7 @@
 //
 
 #import "LHQBaseTopicViewController.h"
+#import "LHQCommentViewController.h"
 #import "LHQBaseTopicCell.h"
 #import "LHQTopic.h"
 #import <AFNetworking.h>
@@ -174,7 +175,12 @@ static NSString *const cellId = @"topic";
 #pragma mark --- table view delegate ---
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
- 
+    LHQTopic *topic = self.topics[indexPath.row];
+    
+    LHQCommentViewController *commentVc = [[LHQCommentViewController alloc] init];
+    topic.commentHeaderView = YES;
+    commentVc.topic = topic;
+    [self.navigationController pushViewController:commentVc animated:YES];
     
 }
 

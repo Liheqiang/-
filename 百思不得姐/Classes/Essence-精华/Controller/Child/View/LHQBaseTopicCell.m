@@ -36,6 +36,12 @@
 
 @end
 @implementation LHQBaseTopicCell
+#pragma#pragma mark -
+#pragma mark Initialisation
++ (instancetype)cell{
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil]lastObject];
+}
+
 #pragma mark --- lazy load ---
 - (LHQTopicPictureView *)pictureView{       
     if (_pictureView == nil) {
@@ -141,11 +147,11 @@
 
 - (void)setFrame:(CGRect)frame{
 
-    frame.origin.x += LHQTopicCellMargin;
+    frame.origin.x = LHQTopicCellMargin;
     frame.size.width -= 2 * LHQTopicCellMargin;
     frame.origin.y += LHQTopicCellMargin;
-    frame.size.height -= LHQTopicCellMargin;
-    
+    frame.size.height = self.topic.cellHeight - LHQTopicCellMargin;
+    LHQLogFun;
     [super setFrame:frame];
 }
 

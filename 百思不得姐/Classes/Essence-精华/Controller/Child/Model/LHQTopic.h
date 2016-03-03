@@ -66,4 +66,5 @@
 @property (nonatomic, assign ,getter=isBigPicture) BOOL bigPicture;
 /** 图片下载进度 */
 @property (nonatomic, assign) CGFloat pictureProgress;
+@property (nonatomic, assign, getter=isCommentHeaderView) BOOL commentHeaderView;
 @end

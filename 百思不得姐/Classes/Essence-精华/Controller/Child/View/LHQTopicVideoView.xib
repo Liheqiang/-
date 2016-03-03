@@ -25,7 +25,6 @@
                         <constraint firstAttribute="height" constant="63" id="N8F-Nd-lGy"/>
                     </constraints>
                     <state key="normal" backgroundImage="video-play"/>
-                    <state key="highlighted" image="playButtonPlay" backgroundImage="playButtonClick"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYq-QX-nO0" userLabel="播放次数">
                     <rect key="frame" x="280.5" y="0.0" width="35.5" height="17"/>
@@ -74,8 +73,6 @@
     </objects>
     <resources>
         <image name="imageBackground" width="75" height="15"/>
-        <image name="playButtonClick" width="63" height="63"/>
-        <image name="playButtonPlay" width="30" height="30"/>
         <image name="video-play" width="71" height="71"/>
     </resources>
 </document>
