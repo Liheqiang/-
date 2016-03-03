@@ -51,6 +51,8 @@
 @property (nonatomic, assign) NSInteger videotime;
 /** 声音帖子的时长 */
 @property (nonatomic, assign) NSInteger voicetime;
+/** 热门评论 */
+@property (nonatomic, strong) NSArray *top_cmt;
 
 /** cell的辅助属性 */
 @property (nonatomic, assign ,readonly) CGFloat cellHeight;

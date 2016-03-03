@@ -95,7 +95,7 @@ static NSString *const cellId = @"topic";
     [[AFHTTPSessionManager manager]GET:requestUrl parameters:self.params progress:nil
       success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-          [responseObject writeToFile:@"/Users/HqLee/Desktop/tiezi.plist" atomically:YES];
+//          [responseObject writeToFile:@"/Users/HqLee/Desktop/tiezi.plist" atomically:YES];
 //          weakSelf.tableView.header.hidden = YES;
           NSArray *newTopics = [LHQTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
 //          LHQLog(@"%@",responseObject);

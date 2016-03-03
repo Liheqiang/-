@@ -10,6 +10,8 @@
 #import "LHQTopicPictureView.h"
 #import "LHQTopicVoiceView.h"
 #import "LHQTopicVideoView.h"
+#import "LHQTopicComment.h"
+#import "LHQUser.h"
 #import "LHQTopic.h"
 #import <UIImageView+WebCache.h>
 
@@ -19,6 +21,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *nickNameLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UIView *commentView;
+@property (weak, nonatomic) IBOutlet UILabel *hotCommentLabel;
+@property (weak, nonatomic) IBOutlet UILabel *commentContentLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *text_label;
 @property (weak, nonatomic) IBOutlet UIButton *dingButton;
@@ -110,6 +115,16 @@
         self.pictureView.hidden = YES;
         self.voiceView.hidden = YES;
         self.videoView.hidden = YES;
+    }
+    
+    if (topic.top_cmt.count!= 0) {
+        
+        self.commentView.hidden = NO;
+        LHQTopicComment *topicComment = [topic.top_cmt firstObject];
+        self.commentContentLabel.text = [NSString stringWithFormat:@"%@:%@",topicComment.user.username,topicComment.content];
+    }else{
+        
+        self.commentView.hidden = YES;
     }
 }
 

@@ -22,7 +22,9 @@ UIKIT_EXTERN  CGFloat const LHQTopicCellBottomViewH;
 UIKIT_EXTERN  CGFloat const LHQTopicPictureMaxH;
 /** cell 的图片压缩的高度 */
 UIKIT_EXTERN  CGFloat const LHQTopicPictureDealH;
-//导航栏高度
+/** 导航栏高度  */
 UIKIT_EXTERN CGFloat const navigationBarHeight;
-//导航栏底部标题视图高度
+/** 导航栏底部标题视图高度  */
 UIKIT_EXTERN CGFloat const titleViewHeight;
+/** 热门评论Label的高度 */
+UIKIT_EXTERN CGFloat const hotCommentLabelHeight;

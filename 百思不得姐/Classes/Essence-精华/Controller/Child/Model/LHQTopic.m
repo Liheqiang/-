@@ -7,6 +7,8 @@
 //
 
 #import "LHQTopic.h"
+#import "LHQTopicComment.h"
+#import "LHQUser.h"
 #import <MJExtension.h>
 
 @implementation LHQTopic
@@ -22,6 +24,11 @@
              @"smallImageUrl":@"image0",
              @"middleImageUrl":@"image2",
              @"bigImageUrl":@"image1"};
+}
+
++ (NSDictionary *)mj_objectClassInArray{
+    
+    return @{@"top_cmt":[LHQTopicComment class]};
 }
 
 - (CGFloat)cellHeight{
@@ -73,6 +80,18 @@
             _videoF = CGRectMake(videoX, videoY, videoW, videoH);
             _cellHeight += videoH + margin;
         }
+        
+        if (self.top_cmt.count != 0) {
+            LHQTopicComment *comment = [self.top_cmt firstObject];
+            
+            NSString * commentStr = [NSString stringWithFormat:@"%@:%@",comment.user.username,comment.content];
+            CGFloat commentLabelH = [commentStr boundingRectWithSize:CGSizeMake(maxWidth, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.height;
+            
+            CGFloat commentViewH = hotCommentLabelHeight + commentLabelH;
+            
+            _cellHeight += commentViewH + margin;
+        }
+        
         
         _cellHeight += margin + bottomH;
     }

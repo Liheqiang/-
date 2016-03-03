@@ -10,6 +10,8 @@
 		2815DDF48572ED3A7BC165DE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 882DC51E7E0B05578F369262 /* libPods.a */; };
 		DB1BEB161C6F778D00F3FCA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1BEB151C6F778D00F3FCA7 /* main.m */; };
 		DB1BEB211C6F778D00F3FCA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB1BEB201C6F778D00F3FCA7 /* Assets.xcassets */; };
+		DB672B431C882B020004AEBB /* LHQTopicComment.m in Sources */ = {isa = PBXBuildFile; fileRef = DB672B421C882B020004AEBB /* LHQTopicComment.m */; };
+		DB672B461C882B190004AEBB /* LHQUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DB672B451C882B190004AEBB /* LHQUser.m */; };
 		DB6B2D1B1C7B3A7400B39E24 /* NSDate+LHQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6B2D1A1C7B3A7400B39E24 /* NSDate+LHQExtension.m */; };
 		DB6B2D201C7B622000B39E24 /* LHQConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6B2D1F1C7B622000B39E24 /* LHQConstant.m */; };
 		DB6B2D621C7FEBF800B39E24 /* LHQWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6B2D611C7FEBF800B39E24 /* LHQWordViewController.m */; };
@@ -69,6 +71,10 @@
 		DB1BEB151C6F778D00F3FCA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DB1BEB201C6F778D00F3FCA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB1BEB251C6F778D00F3FCA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB672B411C882B020004AEBB /* LHQTopicComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQTopicComment.h; sourceTree = "<group>"; };
+		DB672B421C882B020004AEBB /* LHQTopicComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQTopicComment.m; sourceTree = "<group>"; };
+		DB672B441C882B190004AEBB /* LHQUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQUser.h; sourceTree = "<group>"; };
+		DB672B451C882B190004AEBB /* LHQUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQUser.m; sourceTree = "<group>"; };
 		DB6B2D191C7B3A7400B39E24 /* NSDate+LHQExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+LHQExtension.h"; sourceTree = "<group>"; };
 		DB6B2D1A1C7B3A7400B39E24 /* NSDate+LHQExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+LHQExtension.m"; sourceTree = "<group>"; };
 		DB6B2D1E1C7B622000B39E24 /* LHQConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQConstant.h; sourceTree = "<group>"; };
@@ -280,6 +286,10 @@
 			children = (
 				DB6B2D6B1C80146000B39E24 /* LHQTopic.h */,
 				DB6B2D6C1C80146000B39E24 /* LHQTopic.m */,
+				DB672B441C882B190004AEBB /* LHQUser.h */,
+				DB672B451C882B190004AEBB /* LHQUser.m */,
+				DB672B411C882B020004AEBB /* LHQTopicComment.h */,
+				DB672B421C882B020004AEBB /* LHQTopicComment.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -667,6 +677,7 @@
 				DB6FBC8F1C716D9100FD12B5 /* LHQRecommandViewController.m in Sources */,
 				DB7EBFFE1C736D3F0012AD13 /* LHQRecommandTag.m in Sources */,
 				DB7EC02F1C744E610012AD13 /* LHQLoginViewController.m in Sources */,
+				DB672B461C882B190004AEBB /* LHQUser.m in Sources */,
 				DB1BEB161C6F778D00F3FCA7 /* main.m in Sources */,
 				DBD4BF891C70142200687B65 /* LHQMeViewController.m in Sources */,
 				DB6B2D6D1C80146000B39E24 /* LHQTopic.m in Sources */,
@@ -690,6 +701,7 @@
 				DB6B2D621C7FEBF800B39E24 /* LHQWordViewController.m in Sources */,
 				DB7EC0381C747CD40012AD13 /* LHQTextField.m in Sources */,
 				DB6FBC831C7015B700FD12B5 /* LHQTabBar.m in Sources */,
+				DB672B431C882B020004AEBB /* LHQTopicComment.m in Sources */,
 				DBD4BF8A1C70142200687B65 /* LHQNewViewController.m in Sources */,
 				DBD4BF8B1C70142200687B65 /* UIView+LHQExtension.m in Sources */,
 				DB7EC0351C7455850012AD13 /* LHQVerticalButton.m in Sources */,
