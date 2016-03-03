@@ -44,6 +44,7 @@ PODS:
   - MRProgress/ProgressBaseClass (0.8.3)
   - MRProgress/Stopable (0.8.3):
     - MRProgress/Helper
+  - pop (1.0.9)
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
@@ -54,6 +55,7 @@ DEPENDENCIES:
   - MJExtension
   - MJRefresh (= 1.4.6)
   - MRProgress
+  - pop
   - SDWebImage
   - SVProgressHUD
 
@@ -62,6 +64,7 @@ SPEC CHECKSUMS:
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
   MJRefresh: 2eaa3fd8f67fbb86497840fb0167446f7eb61dc7
   MRProgress: 16de7cc9f347e8846797a770db102a323fe7ef09
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
 
