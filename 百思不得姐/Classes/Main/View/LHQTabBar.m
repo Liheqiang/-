@@ -7,6 +7,7 @@
 //
 
 #import "LHQTabBar.h"
+#import "LHQPublishView.h"
 
 @interface LHQTabBar()
 
@@ -24,7 +25,7 @@
         [publicButton setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
         [publicButton setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateHighlighted];
         publicButton.size = publicButton.currentBackgroundImage.size;
-        
+        [publicButton addTarget:self action:@selector(publicButtonClick) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:publicButton];
         self.publicButton = publicButton;
     }
@@ -56,7 +57,10 @@
         index ++;
     }
     
-    
+}
+
+- (void)publicButtonClick{
+    [LHQPublishView show];
 }
 
 @end

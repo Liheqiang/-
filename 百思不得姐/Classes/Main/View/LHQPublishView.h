@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, LHQPublishViewButtonType) {
+    LHQPublishViewButtonTypeVideo,
+    LHQPublishViewButtonTypePicture,
+    LHQPublishViewButtonTypeText,
+    LHQPublishViewButtonTypeAudio,
+    LHQPublishViewButtonTypeReview,
+    LHQPublishViewButtonTypeOffline
+};
 @interface LHQPublishView : UIView
 
 + (instancetype)publishView;
