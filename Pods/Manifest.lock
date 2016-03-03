@@ -53,7 +53,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - MJExtension
-  - MJRefresh (= 1.4.6)
+  - MJRefresh
   - MRProgress
   - pop
   - SDWebImage
