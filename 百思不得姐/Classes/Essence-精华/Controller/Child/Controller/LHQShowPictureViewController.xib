@@ -83,6 +83,7 @@
                 <constraint firstAttribute="trailing" secondItem="dim-To-TXg" secondAttribute="trailing" constant="10" id="tQI-R5-Jfe"/>
                 <constraint firstItem="AxL-nA-aHo" firstAttribute="height" secondItem="dim-To-TXg" secondAttribute="height" id="zLt-oz-hYo"/>
             </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
         </view>
     </objects>
     <resources>

@@ -84,13 +84,12 @@ static NSString *const cellId = @"topic";
     
     self.tableView.backgroundColor = LHQGlobalBg;
     
-    [self.tableView addLegendHeaderWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
-    [self.tableView addLegendFooterWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    self.tableView.mj_header = [MJRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    self.tableView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
 }
 
 - (void)loadNewData{
     
-//    self.tableView.header.hidden = NO;
     [self.params setObject:@(0) forKey:@"page"];
     WeakSelf
     [[AFHTTPSessionManager manager]GET:requestUrl parameters:self.params progress:nil
@@ -105,14 +104,14 @@ static NSString *const cellId = @"topic";
           weakSelf.page = 1;
           [weakSelf.topics removeAllObjects];
           [weakSelf.topics addObjectsFromArray:newTopics];
-          [weakSelf.tableView.header endRefreshing];
+          [weakSelf.tableView.mj_header endRefreshing];
           
           [weakSelf.tableView reloadData];
           
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
 //        weakSelf.tableView.header.hidden = YES;
-        [weakSelf.tableView.header endRefreshing];
+        [weakSelf.tableView.mj_header endRefreshing];
         [SVProgressHUD showErrorWithStatus:@"数据加载失败"];
     }];
     
@@ -130,15 +129,15 @@ static NSString *const cellId = @"topic";
           weakSelf.count = [responseObject[@"info"][@"count"] integerValue];
           weakSelf.page +=1;
           if (weakSelf.count == newTopics.count) {//说明数据加载完了
-              [weakSelf.tableView.footer noticeNoMoreData];
+              [weakSelf.tableView.mj_footer endRefreshingWithNoMoreData];
               return ;
           }
           [weakSelf.topics addObjectsFromArray:newTopics];
-          [weakSelf.tableView.footer endRefreshing];
+          [weakSelf.tableView.mj_footer endRefreshing];
           
           [weakSelf.tableView reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-          [weakSelf.tableView.footer endRefreshing];
+          [weakSelf.tableView.mj_footer endRefreshing];
           [SVProgressHUD showErrorWithStatus:@"数据加载失败"];
     }];
     
@@ -147,7 +146,7 @@ static NSString *const cellId = @"topic";
 - (void)firstRefresh{
     
     LHQLog(@"%@",self.params);
-    [self.tableView.header beginRefreshing];
+    [self.tableView.mj_header beginRefreshing];
 }
 
 #pragma mark - Table view data source
@@ -159,7 +158,7 @@ static NSString *const cellId = @"topic";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    self.tableView.footer.hidden = (self.topics.count == 0);
+    self.tableView.mj_footer.hidden = (self.topics.count == 0);
     return self.topics.count;
 }
 

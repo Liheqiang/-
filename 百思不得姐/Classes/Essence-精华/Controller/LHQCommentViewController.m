@@ -8,12 +8,14 @@
 
 #import "LHQCommentViewController.h"
 #import <MJRefresh.h>
+#import <AFNetworking.h>
 #import <UIImageView+WebCache.h>
 #import "LHQBaseTopicCell.h"
 #import "LHQTopic.h"
 
 static NSString *const cellId = @"cell";
-
+static NSString *const headerViewId = @"header";
+static NSInteger const headerViewLabelTag = 99;
 @interface LHQCommentViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *toolbarBottom;
@@ -26,6 +28,7 @@ static NSString *const cellId = @"cell";
     
     [self setupTableHeaderView];
     [self setupTableView];
+    [self registerNotification];
 }
 
 #pragma -
@@ -33,6 +36,8 @@ static NSString *const cellId = @"cell";
 - (void)setupTableHeaderView{
     UIView *headerView = [[UIView alloc] init];
     LHQBaseTopicCell *topicCell = [LHQBaseTopicCell cell];
+    [self.topic setValue:@(0) forKey:@"cellHeight"];
+    self.topic.top_cmt = nil;
     [headerView addSubview:topicCell];
     topicCell.topic = self.topic;
     topicCell.frame = CGRectMake(0, 0, kScreenWidth, self.topic.cellHeight);
@@ -47,7 +52,37 @@ static NSString *const cellId = @"cell";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellId];
     
     //添加头部刷新控件
-//    self.tableView.header = [];
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    self.tableView.mj_footer = [MJRefreshBackFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+}
+
+- (void)registerNotification{
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardFrameChange:) name:UIKeyboardWillChangeFrameNotification object:nil];
+}
+
+- (void)loadNewData{
+    
+    
+    
+}
+
+- (void)loadMoreData{
+    
+}
+
+#pragma - 
+#pragma mark - notification event
+- (void)keyboardFrameChange:(NSNotification *)noti{
+    
+    CGRect frame = [noti.userInfo[@"UIKeyboardFrameEndUserInfoKey"] CGRectValue];
+    double duration = [noti.userInfo[@"UIKeyboardAnimationDurationUserInfoKey"]doubleValue];
+
+    self.toolbarBottom.constant = kScreenHeight - frame.origin.y;
+    [UIView animateWithDuration:duration animations:^{
+        [self.view layoutIfNeeded];
+    }];
+    
 }
 
 
@@ -58,7 +93,7 @@ static NSString *const cellId = @"cell";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 100;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -74,5 +109,30 @@ static NSString *const cellId = @"cell";
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     
+    UITableViewHeaderFooterView *headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:headerViewId];
+    if (headerView == nil) {
+        
+        headerView = [[UITableViewHeaderFooterView alloc] initWithReuseIdentifier:headerViewId];
+        UILabel *label = [[UILabel alloc] init];
+        [headerView addSubview:label];
+        label.x = LHQTopicCellMargin;
+        label.size = headerView.size;
+        label.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;//随着父控件的宽高变化
+        label.tag = headerViewLabelTag;
+    }
+    
+    UILabel * label = (UILabel *)[headerView viewWithTag:headerViewLabelTag];
+    if (section == 0) {
+        label.text = @"最热评论";
+    }else{
+        label.text = @"最新评论";
+    }
+
+    return headerView;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [self.view endEditing:YES];
 }
 @end

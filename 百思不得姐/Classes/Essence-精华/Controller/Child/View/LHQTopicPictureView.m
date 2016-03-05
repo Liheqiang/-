@@ -62,6 +62,21 @@
         
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         weakSelf.progressView.hidden = YES;
+        
+        if (!topic.isBigPicture) return ;//非大图就不处理了
+        
+        CGSize maxSize = CGSizeMake(kScreenWidth - 4 * LHQTopicCellMargin, LHQTopicPictureDealH);
+        UIGraphicsBeginImageContextWithOptions(maxSize, YES, 1.0);//获得图形上下文
+        
+        CGFloat pictureW = image.size.width;
+        CGFloat pictureH = image.size.height;
+        
+        [image drawInRect:CGRectMake(0, 0, maxSize.width, maxSize.width * pictureH / pictureW)];
+        
+        self.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+        
+        UIGraphicsEndImageContext();//关闭图形上下文
+        
     }];
     
     NSString *imageUrl = topic.bigImageUrl;

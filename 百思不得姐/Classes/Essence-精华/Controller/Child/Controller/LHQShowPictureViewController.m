@@ -33,6 +33,7 @@
         CGFloat pictureX = 0;
         CGFloat pictureY = 0;
         imageView.frame = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+        self.scrollView.contentSize = imageView.frame.size;
     }else{
         imageView.size = CGSizeMake(pictureW, pictureH);
         imageView.center = CGPointMake(kScreenWidth * 0.5, kScreenHeight * 0.5);

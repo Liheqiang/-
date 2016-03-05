@@ -74,9 +74,9 @@ static NSString *const userCellId = @"user";
 
 - (void)setupRefresh{
     
-    [self.userTableView addLegendHeaderWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
-    [self.userTableView addLegendFooterWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
-    self.userTableView.footer.hidden = YES;
+    self.userTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    self.userTableView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    self.userTableView.mj_footer.hidden = YES;
 }
 
 /**
@@ -103,7 +103,7 @@ static NSString *const userCellId = @"user";
                   [weakSelf.categoryTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionTop];
                   
                   //让用户表格进入下拉刷新状态
-                  [weakSelf.userTableView.header beginRefreshing];//刷新
+                  [weakSelf.userTableView.mj_header beginRefreshing];//刷新
                   
                   
                   LHQLog(@"%@",responseObject);
@@ -147,7 +147,7 @@ static NSString *const userCellId = @"user";
             [weakSelf.userTableView reloadData];
             
             //结束刷新
-            [weakSelf.userTableView.header endRefreshing];
+            [weakSelf.userTableView.mj_header endRefreshing];
             
             //让底部控件结束刷新
             [weakSelf checkFooterState];
@@ -159,7 +159,7 @@ static NSString *const userCellId = @"user";
             if (weakSelf.params != params) return ;
             
             [SVProgressHUD showErrorWithStatus:@"加载失败"];
-            [weakSelf.userTableView.header endRefreshing];
+            [weakSelf.userTableView.mj_header endRefreshing];
         
         }];
 
@@ -202,7 +202,7 @@ static NSString *const userCellId = @"user";
             
             [SVProgressHUD showErrorWithStatus:@"加载失败"];
             
-            [weakSelf.userTableView.footer endRefreshing];
+            [weakSelf.userTableView.mj_footer endRefreshing];
                                     
         }];
 }
@@ -211,14 +211,14 @@ static NSString *const userCellId = @"user";
     
     LHQRecommandCategory *category = selectedCategory;
     
-    self.userTableView.footer.hidden = (category.users.count == 0);
+    self.userTableView.mj_footer.hidden = (category.users.count == 0);
     
     if (category.users.count == category.total) {
         //提醒没有更多数据
-        [self.userTableView.footer noticeNoMoreData];
+        [self.userTableView.mj_footer endRefreshingWithNoMoreData];
     }else{
         //显示footer的状态为还可以上拉加载
-        [self.userTableView.footer endRefreshing];
+        [self.userTableView.mj_footer endRefreshing];
     }
     
 }

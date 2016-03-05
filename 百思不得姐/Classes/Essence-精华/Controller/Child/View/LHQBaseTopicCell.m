@@ -151,7 +151,6 @@
     frame.size.width -= 2 * LHQTopicCellMargin;
     frame.origin.y += LHQTopicCellMargin;
     frame.size.height = self.topic.cellHeight - LHQTopicCellMargin;
-    LHQLogFun;
     [super setFrame:frame];
 }
 
