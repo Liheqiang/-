@@ -19,6 +19,7 @@ static NSInteger const headerViewLabelTag = 99;
 @interface LHQCommentViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *toolbarBottom;
+@property (nonatomic, strong) NSArray *save_top_cmt;
 @end
 
 @implementation LHQCommentViewController
@@ -36,6 +37,7 @@ static NSInteger const headerViewLabelTag = 99;
 - (void)setupTableHeaderView{
     UIView *headerView = [[UIView alloc] init];
     LHQBaseTopicCell *topicCell = [LHQBaseTopicCell cell];
+    self.save_top_cmt = self.topic.top_cmt;
     [self.topic setValue:@(0) forKey:@"cellHeight"];
     self.topic.top_cmt = nil;
     [headerView addSubview:topicCell];
@@ -83,6 +85,12 @@ static NSInteger const headerViewLabelTag = 99;
         [self.view layoutIfNeeded];
     }];
     
+}
+
+- (void)dealloc{
+    self.topic.top_cmt = self.save_top_cmt;
+    [self.topic setValue:@(0) forKey:@"cellHeight"];
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 
 
