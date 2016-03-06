@@ -11,6 +11,7 @@
 
 @interface LHQTopicComment : NSObject
 
+@property (nonatomic, copy) NSString *ID;
 @property (nonatomic, copy) NSString *content;
 @property (nonatomic, copy) NSString *ctime;
 @property (nonatomic, assign) NSInteger like_count;

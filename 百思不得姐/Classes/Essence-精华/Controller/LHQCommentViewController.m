@@ -8,10 +8,14 @@
 
 #import "LHQCommentViewController.h"
 #import <MJRefresh.h>
+#import <SVProgressHUD.h>
 #import <AFNetworking.h>
 #import <UIImageView+WebCache.h>
 #import "LHQBaseTopicCell.h"
 #import "LHQTopic.h"
+#import "LHQUser.h"
+#import <MJExtension.h>
+#import "LHQTopicComment.h"
 
 static NSString *const cellId = @"cell";
 static NSString *const headerViewId = @"header";
@@ -20,6 +24,8 @@ static NSInteger const headerViewLabelTag = 99;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *toolbarBottom;
 @property (nonatomic, strong) NSArray *save_top_cmt;
+@property (nonatomic, strong) NSArray *hotComments;
+@property (nonatomic, strong) NSMutableArray *latestComments;
 @end
 
 @implementation LHQCommentViewController
@@ -30,6 +36,7 @@ static NSInteger const headerViewLabelTag = 99;
     [self setupTableHeaderView];
     [self setupTableView];
     [self registerNotification];
+    [self beginRefresh];
 }
 
 #pragma -
@@ -63,9 +70,28 @@ static NSInteger const headerViewLabelTag = 99;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardFrameChange:) name:UIKeyboardWillChangeFrameNotification object:nil];
 }
 
+- (void)beginRefresh{
+    [self.tableView.mj_header beginRefreshing];
+}
+
 - (void)loadNewData{
     
-    
+    WeakSelf
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"dataList";
+    params[@"c"] = @"comment";
+    params[@"hot"] = @"1";
+    params[@"data_id"] = self.topic.Id;
+    [[AFHTTPSessionManager manager]GET:requestUrl parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        weakSelf.hotComments = [LHQTopicComment mj_objectArrayWithKeyValuesArray:responseObject[@"hot"]];
+        weakSelf.latestComments = [LHQTopicComment mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
+        [weakSelf.tableView reloadData];
+        [weakSelf.tableView.mj_header endRefreshing];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [SVProgressHUD showErrorWithStatus:@"加载数据失败"];
+        [weakSelf.tableView.mj_header endRefreshing];
+    }];
     
 }
 
@@ -97,16 +123,39 @@ static NSInteger const headerViewLabelTag = 99;
 #pragma -
 #pragma uitable view datasource ---
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 2;
+    
+    if (self.hotComments.count != 0) {//如果有热门评论 那么一定有最新评论
+        return 2;
+    }else{
+        if (self.latestComments.count != 0) {//如果没有热门评论，不一定有最新评论
+            return 1;
+        }
+        else return 0;
+    }
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    if (self.hotComments.count != 0) {//如果有热门评论 那么一定有最新评论
+        if (section == 0){
+            return self.hotComments.count;
+        }else{
+            return self.latestComments.count;
+        }
+    }else{
+        if (self.latestComments.count != 0) {//如果没有热门评论，不一定有最新评论
+            return self.latestComments.count;
+        }
+        else return 0;
+    }
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    LHQTopicComment *comment = [self commentInIndexPath:indexPath];
+    cell.textLabel.text = comment.content;
     return cell;
 }
 #pragma -
@@ -130,15 +179,35 @@ static NSInteger const headerViewLabelTag = 99;
     }
     
     UILabel * label = (UILabel *)[headerView viewWithTag:headerViewLabelTag];
-    if (section == 0) {
-        label.text = @"最热评论";
+    if (self.hotComments.count != 0) {//如果有热门评论 那么一定有最新评论
+        if (section == 0){
+            label.text = @"最热评论";
+        }else{
+            label.text = @"最新评论";
+        }
     }else{
-        label.text = @"最新评论";
+        if (self.latestComments.count != 0) {//如果没有热门评论，不一定有最新评论
+            label.text = @"最新评论";
+        }
+        else label.text = nil;
     }
 
     return headerView;
 }
 
+- (NSArray *)commentInSection:(NSInteger)section{
+    if (section == 0) {
+        return self.hotComments.count ? self.hotComments : self.latestComments;
+    }else
+        return self.latestComments;
+}
+
+- (LHQTopicComment *)commentInIndexPath:(NSIndexPath *)indexPath{
+    return [self commentInSection:indexPath.section][indexPath.row];
+}
+
+#pragma -
+#pragma mark - ScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     [self.view endEditing:YES];

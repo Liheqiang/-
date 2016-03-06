@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface LHQUser : NSObject
+
+@property (nonatomic, copy) NSString *profile_image;
 @property (nonatomic, copy) NSString *username;
 @property (nonatomic, copy) NSString *sex;
 @property (nonatomic, copy) NSString *ID;
