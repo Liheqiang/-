@@ -191,4 +191,9 @@ static NSString *const cellId = @"topic";
     return topic.cellHeight;
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    
+    LHQLog(@"%@",NSStringFromCGPoint(scrollView.contentOffset));
+    
+}
 @end

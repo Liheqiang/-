@@ -6,8 +6,8 @@
 //  Copyright © 2016年 HqLee. All rights reserved.
 //
 
-#import "MRCircularProgressView.h"
+#import <DACircularProgressView.h>
 
-@interface LHQProgressView : MRCircularProgressView
+@interface LHQProgressView : DACircularProgressView
 
 @end

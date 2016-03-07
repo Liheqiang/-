@@ -12,8 +12,7 @@
 
 - (void)awakeFromNib{
     
-    self.borderWidth = 0;
-    self.lineWidth = 10;
+    self.roundedCorners = 5.0f;
 }
 
 @end
