@@ -4,7 +4,7 @@
 //
 //  Created by HqLee on 16/3/3.
 //  Copyright © 2016年 HqLee. All rights reserved.
-//
+//  采用自动计算高度，只适用iOS8 之后
 
 #import "LHQCommentViewController.h"
 #import <MJRefresh.h>
@@ -16,8 +16,9 @@
 #import "LHQUser.h"
 #import <MJExtension.h>
 #import "LHQTopicComment.h"
+#import "LHQCommentCell.h"
 
-static NSString *const cellId = @"cell";
+static NSString *const cellId = @"comment";
 static NSString *const headerViewId = @"header";
 static NSInteger const headerViewLabelTag = 99;
 @interface LHQCommentViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -58,8 +59,10 @@ static NSInteger const headerViewLabelTag = 99;
 - (void)setupTableView{
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = LHQGlobalBg;
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellId];
-    
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LHQCommentCell class]) bundle:nil] forCellReuseIdentifier:cellId];
+    //自动计算高度
+    self.tableView.estimatedRowHeight = 44;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
     //添加头部刷新控件
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
     self.tableView.mj_footer = [MJRefreshBackFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
@@ -75,6 +78,7 @@ static NSInteger const headerViewLabelTag = 99;
 }
 
 - (void)loadNewData{
+    
     
     WeakSelf
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
@@ -153,9 +157,9 @@ static NSInteger const headerViewLabelTag = 99;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    LHQCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     LHQTopicComment *comment = [self commentInIndexPath:indexPath];
-    cell.textLabel.text = comment.content;
+    cell.comment = comment;
     return cell;
 }
 #pragma -

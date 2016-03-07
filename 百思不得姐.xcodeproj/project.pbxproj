@@ -16,6 +16,8 @@
 		DB6AEEFA1C88440900B4F611 /* LHQPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6AEEF91C88440900B4F611 /* LHQPublishView.xib */; };
 		DB6AEF011C8875A800B4F611 /* LHQCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6AEEFF1C8875A800B4F611 /* LHQCommentViewController.m */; };
 		DB6AEF021C8875A800B4F611 /* LHQCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6AEF001C8875A800B4F611 /* LHQCommentViewController.xib */; };
+		DB6AEF351C8C733900B4F611 /* LHQCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6AEF331C8C733900B4F611 /* LHQCommentCell.m */; };
+		DB6AEF361C8C733900B4F611 /* LHQCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6AEF341C8C733900B4F611 /* LHQCommentCell.xib */; };
 		DB6B2D1B1C7B3A7400B39E24 /* NSDate+LHQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6B2D1A1C7B3A7400B39E24 /* NSDate+LHQExtension.m */; };
 		DB6B2D201C7B622000B39E24 /* LHQConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6B2D1F1C7B622000B39E24 /* LHQConstant.m */; };
 		DB6B2D621C7FEBF800B39E24 /* LHQWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6B2D611C7FEBF800B39E24 /* LHQWordViewController.m */; };
@@ -85,6 +87,9 @@
 		DB6AEEFE1C8875A800B4F611 /* LHQCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQCommentViewController.h; sourceTree = "<group>"; };
 		DB6AEEFF1C8875A800B4F611 /* LHQCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQCommentViewController.m; sourceTree = "<group>"; };
 		DB6AEF001C8875A800B4F611 /* LHQCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LHQCommentViewController.xib; sourceTree = "<group>"; };
+		DB6AEF321C8C733900B4F611 /* LHQCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQCommentCell.h; sourceTree = "<group>"; };
+		DB6AEF331C8C733900B4F611 /* LHQCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQCommentCell.m; sourceTree = "<group>"; };
+		DB6AEF341C8C733900B4F611 /* LHQCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LHQCommentCell.xib; sourceTree = "<group>"; };
 		DB6B2D191C7B3A7400B39E24 /* NSDate+LHQExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+LHQExtension.h"; sourceTree = "<group>"; };
 		DB6B2D1A1C7B3A7400B39E24 /* NSDate+LHQExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+LHQExtension.m"; sourceTree = "<group>"; };
 		DB6B2D1E1C7B622000B39E24 /* LHQConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQConstant.h; sourceTree = "<group>"; };
@@ -321,6 +326,9 @@
 				DB7428CC1C868D56000497AA /* LHQTopicVoiceView.xib */,
 				DBCDD1861C84525700F1452C /* LHQProgressView.h */,
 				DBCDD1871C84525700F1452C /* LHQProgressView.m */,
+				DB6AEF321C8C733900B4F611 /* LHQCommentCell.h */,
+				DB6AEF331C8C733900B4F611 /* LHQCommentCell.m */,
+				DB6AEF341C8C733900B4F611 /* LHQCommentCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -640,6 +648,7 @@
 				DB6B2D671C7FEC2700B39E24 /* LHQBaseTopicCell.xib in Resources */,
 				DB6FBC8B1C70A42D00FD12B5 /* LHQFriendTrendsViewController.xib in Resources */,
 				DB6AEF021C8875A800B4F611 /* LHQCommentViewController.xib in Resources */,
+				DB6AEF361C8C733900B4F611 /* LHQCommentCell.xib in Resources */,
 				DB6FBC951C71719700FD12B5 /* LHQRecommandCategoryCell.xib in Resources */,
 				DB6B2D721C83E13400B39E24 /* LHQTopicPictureView.xib in Resources */,
 				DB1BEB211C6F778D00F3FCA7 /* Assets.xcassets in Resources */,
@@ -711,6 +720,7 @@
 				DBCDD18C1C84543C00F1452C /* LHQShowPictureViewController.m in Sources */,
 				DB6AEF011C8875A800B4F611 /* LHQCommentViewController.m in Sources */,
 				DB7EC05C1C75B0500012AD13 /* LHQPictureViewController.m in Sources */,
+				DB6AEF351C8C733900B4F611 /* LHQCommentCell.m in Sources */,
 				DBCDD1881C84525700F1452C /* LHQProgressView.m in Sources */,
 				DB6B2D701C83E11D00B39E24 /* LHQTopicPictureView.m in Sources */,
 				DB6B2D1B1C7B3A7400B39E24 /* NSDate+LHQExtension.m in Sources */,
