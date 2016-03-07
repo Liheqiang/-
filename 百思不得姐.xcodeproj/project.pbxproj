@@ -10,6 +10,10 @@
 		2815DDF48572ED3A7BC165DE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 882DC51E7E0B05578F369262 /* libPods.a */; };
 		DB1BEB161C6F778D00F3FCA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1BEB151C6F778D00F3FCA7 /* main.m */; };
 		DB1BEB211C6F778D00F3FCA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB1BEB201C6F778D00F3FCA7 /* Assets.xcassets */; };
+		DB3CEAB31C8D6B5200F78EEC /* LHQTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEAAE1C8D6B5200F78EEC /* LHQTextField.m */; };
+		DB3CEAB41C8D6B5200F78EEC /* LHQTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEAB01C8D6B5200F78EEC /* LHQTopWindow.m */; };
+		DB3CEAB51C8D6B5200F78EEC /* LHQVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEAB21C8D6B5200F78EEC /* LHQVerticalButton.m */; };
+		DB3CEAB81C8D6B6900F78EEC /* LHQTopWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEAB71C8D6B6900F78EEC /* LHQTopWindowViewController.m */; };
 		DB672B431C882B020004AEBB /* LHQTopicComment.m in Sources */ = {isa = PBXBuildFile; fileRef = DB672B421C882B020004AEBB /* LHQTopicComment.m */; };
 		DB672B461C882B190004AEBB /* LHQUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DB672B451C882B190004AEBB /* LHQUser.m */; };
 		DB6AEEF81C8843FE00B4F611 /* LHQPublishView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6AEEF71C8843FE00B4F611 /* LHQPublishView.m */; };
@@ -49,8 +53,6 @@
 		DB7EC0031C736D590012AD13 /* LHQRecommandTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB7EC0011C736D590012AD13 /* LHQRecommandTagCell.xib */; };
 		DB7EC02F1C744E610012AD13 /* LHQLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EC02D1C744E610012AD13 /* LHQLoginViewController.m */; };
 		DB7EC0301C744E610012AD13 /* LHQLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB7EC02E1C744E610012AD13 /* LHQLoginViewController.xib */; };
-		DB7EC0351C7455850012AD13 /* LHQVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EC0341C7455850012AD13 /* LHQVerticalButton.m */; };
-		DB7EC0381C747CD40012AD13 /* LHQTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EC0371C747CD40012AD13 /* LHQTextField.m */; };
 		DB7EC03B1C755D300012AD13 /* LHQPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EC03A1C755D300012AD13 /* LHQPushGuideView.m */; };
 		DB7EC03D1C755D390012AD13 /* LHQPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB7EC03C1C755D390012AD13 /* LHQPushGuideView.xib */; };
 		DB7EC05B1C75B0500012AD13 /* LHQAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7EC0501C75B0500012AD13 /* LHQAllViewController.m */; };
@@ -77,6 +79,14 @@
 		DB1BEB151C6F778D00F3FCA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DB1BEB201C6F778D00F3FCA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB1BEB251C6F778D00F3FCA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB3CEAAD1C8D6B5200F78EEC /* LHQTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQTextField.h; sourceTree = "<group>"; };
+		DB3CEAAE1C8D6B5200F78EEC /* LHQTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQTextField.m; sourceTree = "<group>"; };
+		DB3CEAAF1C8D6B5200F78EEC /* LHQTopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQTopWindow.h; sourceTree = "<group>"; };
+		DB3CEAB01C8D6B5200F78EEC /* LHQTopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQTopWindow.m; sourceTree = "<group>"; };
+		DB3CEAB11C8D6B5200F78EEC /* LHQVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQVerticalButton.h; sourceTree = "<group>"; };
+		DB3CEAB21C8D6B5200F78EEC /* LHQVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQVerticalButton.m; sourceTree = "<group>"; };
+		DB3CEAB61C8D6B6900F78EEC /* LHQTopWindowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQTopWindowViewController.h; sourceTree = "<group>"; };
+		DB3CEAB71C8D6B6900F78EEC /* LHQTopWindowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQTopWindowViewController.m; sourceTree = "<group>"; };
 		DB672B411C882B020004AEBB /* LHQTopicComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQTopicComment.h; sourceTree = "<group>"; };
 		DB672B421C882B020004AEBB /* LHQTopicComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQTopicComment.m; sourceTree = "<group>"; };
 		DB672B441C882B190004AEBB /* LHQUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQUser.h; sourceTree = "<group>"; };
@@ -142,10 +152,6 @@
 		DB7EC02C1C744E610012AD13 /* LHQLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQLoginViewController.h; sourceTree = "<group>"; };
 		DB7EC02D1C744E610012AD13 /* LHQLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQLoginViewController.m; sourceTree = "<group>"; };
 		DB7EC02E1C744E610012AD13 /* LHQLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LHQLoginViewController.xib; sourceTree = "<group>"; };
-		DB7EC0331C7455850012AD13 /* LHQVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQVerticalButton.h; sourceTree = "<group>"; };
-		DB7EC0341C7455850012AD13 /* LHQVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQVerticalButton.m; sourceTree = "<group>"; };
-		DB7EC0361C747CD40012AD13 /* LHQTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQTextField.h; sourceTree = "<group>"; };
-		DB7EC0371C747CD40012AD13 /* LHQTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQTextField.m; sourceTree = "<group>"; };
 		DB7EC0391C755D300012AD13 /* LHQPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQPushGuideView.h; sourceTree = "<group>"; };
 		DB7EC03A1C755D300012AD13 /* LHQPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQPushGuideView.m; sourceTree = "<group>"; };
 		DB7EC03C1C755D390012AD13 /* LHQPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LHQPushGuideView.xib; sourceTree = "<group>"; };
@@ -245,23 +251,35 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DB7EC0311C7454A60012AD13 /* utility */ = {
+		DB3CEAAA1C8D6B5200F78EEC /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				DB7EC0321C7454A60012AD13 /* view */,
+				DB3CEAAB1C8D6B5200F78EEC /* Controller */,
+				DB3CEAAC1C8D6B5200F78EEC /* View */,
 			);
-			path = utility;
+			path = Utility;
 			sourceTree = "<group>";
 		};
-		DB7EC0321C7454A60012AD13 /* view */ = {
+		DB3CEAAB1C8D6B5200F78EEC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DB7EC0331C7455850012AD13 /* LHQVerticalButton.h */,
-				DB7EC0341C7455850012AD13 /* LHQVerticalButton.m */,
-				DB7EC0361C747CD40012AD13 /* LHQTextField.h */,
-				DB7EC0371C747CD40012AD13 /* LHQTextField.m */,
+				DB3CEAB61C8D6B6900F78EEC /* LHQTopWindowViewController.h */,
+				DB3CEAB71C8D6B6900F78EEC /* LHQTopWindowViewController.m */,
 			);
-			path = view;
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DB3CEAAC1C8D6B5200F78EEC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB3CEAAD1C8D6B5200F78EEC /* LHQTextField.h */,
+				DB3CEAAE1C8D6B5200F78EEC /* LHQTextField.m */,
+				DB3CEAAF1C8D6B5200F78EEC /* LHQTopWindow.h */,
+				DB3CEAB01C8D6B5200F78EEC /* LHQTopWindow.m */,
+				DB3CEAB11C8D6B5200F78EEC /* LHQVerticalButton.h */,
+				DB3CEAB21C8D6B5200F78EEC /* LHQVerticalButton.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		DB7EC04D1C75B0500012AD13 /* Child */ = {
@@ -554,7 +572,7 @@
 		DBD4BF801C70142200687B65 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				DB7EC0311C7454A60012AD13 /* utility */,
+				DB3CEAAA1C8D6B5200F78EEC /* Utility */,
 				DBD4BF811C70142200687B65 /* Category */,
 				DBD4BF841C70142200687B65 /* PrefixHeader.pch */,
 				DB6B2D1E1C7B622000B39E24 /* LHQConstant.h */,
@@ -702,6 +720,7 @@
 				DBD4BF851C70142200687B65 /* AppDelegate.m in Sources */,
 				DB6FBC991C7171AE00FD12B5 /* LHQRecommandUserCell.m in Sources */,
 				DB6FBC8F1C716D9100FD12B5 /* LHQRecommandViewController.m in Sources */,
+				DB3CEAB41C8D6B5200F78EEC /* LHQTopWindow.m in Sources */,
 				DB7EBFFE1C736D3F0012AD13 /* LHQRecommandTag.m in Sources */,
 				DB7EC02F1C744E610012AD13 /* LHQLoginViewController.m in Sources */,
 				DB672B461C882B190004AEBB /* LHQUser.m in Sources */,
@@ -715,6 +734,7 @@
 				DB7428CB1C868D43000497AA /* LHQTopicVoiceView.m in Sources */,
 				DB6FBCA01C71AA0D00FD12B5 /* LHQRecommandUser.m in Sources */,
 				DB6FBC861C701BB500FD12B5 /* UIBarButtonItem+LHQExtension.m in Sources */,
+				DB3CEAB31C8D6B5200F78EEC /* LHQTextField.m in Sources */,
 				DB7EBFFB1C736C130012AD13 /* LHQRecommandTagsViewController.m in Sources */,
 				DBD4BF871C70142200687B65 /* LHQFriendTrendsViewController.m in Sources */,
 				DBCDD18C1C84543C00F1452C /* LHQShowPictureViewController.m in Sources */,
@@ -723,21 +743,21 @@
 				DB6AEF351C8C733900B4F611 /* LHQCommentCell.m in Sources */,
 				DBCDD1881C84525700F1452C /* LHQProgressView.m in Sources */,
 				DB6B2D701C83E11D00B39E24 /* LHQTopicPictureView.m in Sources */,
+				DB3CEAB51C8D6B5200F78EEC /* LHQVerticalButton.m in Sources */,
 				DB6B2D1B1C7B3A7400B39E24 /* NSDate+LHQExtension.m in Sources */,
 				DB7EC05B1C75B0500012AD13 /* LHQAllViewController.m in Sources */,
 				DB7EC05F1C75B0500012AD13 /* LHQVoiceViewController.m in Sources */,
 				DB6B2D6A1C7FEC4C00B39E24 /* LHQBaseTopicViewController.m in Sources */,
 				DB6B2D621C7FEBF800B39E24 /* LHQWordViewController.m in Sources */,
-				DB7EC0381C747CD40012AD13 /* LHQTextField.m in Sources */,
 				DB6FBC831C7015B700FD12B5 /* LHQTabBar.m in Sources */,
 				DB672B431C882B020004AEBB /* LHQTopicComment.m in Sources */,
 				DBD4BF8A1C70142200687B65 /* LHQNewViewController.m in Sources */,
 				DB6AEEF81C8843FE00B4F611 /* LHQPublishView.m in Sources */,
 				DBD4BF8B1C70142200687B65 /* UIView+LHQExtension.m in Sources */,
-				DB7EC0351C7455850012AD13 /* LHQVerticalButton.m in Sources */,
 				DB7EC0021C736D590012AD13 /* LHQRecommandTagCell.m in Sources */,
 				DB6FBC941C71719700FD12B5 /* LHQRecommandCategoryCell.m in Sources */,
 				DB6FBC9D1C71785C00FD12B5 /* LHQRecommandCategory.m in Sources */,
+				DB3CEAB81C8D6B6900F78EEC /* LHQTopWindowViewController.m in Sources */,
 				DBD4BF861C70142200687B65 /* LHQEssenceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

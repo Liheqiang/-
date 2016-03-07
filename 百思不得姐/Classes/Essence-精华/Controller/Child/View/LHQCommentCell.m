@@ -22,7 +22,7 @@
 
 - (void)awakeFromNib {
    
-    self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@""]];
+    self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainCellBackground"]];
 }
 
 #pragma -
@@ -31,7 +31,7 @@
     
     _comment = comment;
     //头像
-    [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:comment.user.profile_image] placeholderImage:[UIImage imageNamed:@""]];
+    [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:comment.user.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     //昵称
     self.nameLabel.text = comment.user.username;
     //性别
@@ -41,5 +41,16 @@
     //评论内容
     self.contentLabel.text = comment.content;
 }
+#pragma -
+#pragma mark ---  要能成为第一响应者，弹出menuController还需要实现下面两个方法
+- (BOOL)canBecomeFirstResponder{
+    return YES;
+}
+
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender{
+    
+    return NO;
+}
+
 
 @end

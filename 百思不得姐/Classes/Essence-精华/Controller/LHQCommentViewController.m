@@ -166,6 +166,23 @@ static NSInteger const headerViewLabelTag = 99;
 #pragma uitable view delegate ---
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    LHQCommentCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    //弹出菜单控制器
+    [cell becomeFirstResponder];
+    UIMenuController *menu = [UIMenuController sharedMenuController];
+    if (menu.isMenuVisible) {
+        [menu setMenuVisible:NO animated:YES];
+        return;
+    }
+    UIMenuItem *like = [[UIMenuItem alloc] initWithTitle:@"顶" action:@selector(like:)];
+    UIMenuItem *reply = [[UIMenuItem alloc] initWithTitle:@"回复" action:@selector(reply:)];
+    UIMenuItem *report = [[UIMenuItem alloc] initWithTitle:@"举报" action:@selector(report:)];
+    menu.menuItems = @[like,reply,report];
+    
+    CGRect showRect = CGRectMake(0, cell.height * 0.5, cell.width, cell.height * 0.5);
+    [menu setTargetRect:showRect inView:cell];
+    [menu setMenuVisible:YES animated:YES];
+    
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -209,6 +226,30 @@ static NSInteger const headerViewLabelTag = 99;
 - (LHQTopicComment *)commentInIndexPath:(NSIndexPath *)indexPath{
     return [self commentInSection:indexPath.section][indexPath.row];
 }
+
+#pragma mark --- event response ---
+- (void)like:(UIMenuController *)menu{
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    LHQTopicComment *comment = [self commentInIndexPath:indexPath];
+    
+    LHQLog(@"%@:like %@",comment.user.username,comment.content);
+}
+
+- (void)reply:(UIMenuController *)menu{
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    LHQTopicComment *comment = [self commentInIndexPath:indexPath];
+    
+    LHQLog(@"%@:reply %@",comment.user.username,comment.content);
+    
+}
+
+- (void)report:(UIMenuController *)menu{
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    LHQTopicComment *comment = [self commentInIndexPath:indexPath];
+    
+    LHQLog(@"%@:reply %@",comment.user.username,comment.content);
+}
+
 
 #pragma -
 #pragma mark - ScrollViewDelegate

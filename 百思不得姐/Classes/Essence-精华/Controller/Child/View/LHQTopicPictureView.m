@@ -66,7 +66,7 @@
         if (!topic.isBigPicture) return ;//非大图就不处理了
         
         CGSize maxSize = CGSizeMake(kScreenWidth - 4 * LHQTopicCellMargin, LHQTopicPictureDealH);
-        UIGraphicsBeginImageContextWithOptions(maxSize, YES, 1.0);//获得图形上下文
+        UIGraphicsBeginImageContextWithOptions(maxSize, YES, 0.0);//获得图形上下文
         
         CGFloat pictureW = image.size.width;
         CGFloat pictureH = image.size.height;

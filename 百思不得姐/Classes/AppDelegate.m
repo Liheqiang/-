@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "LHQTabBarController.h"
 #import "LHQPushGuideView.h"
+#import "LHQTopWindow.h"
 
 @interface AppDelegate ()
 
@@ -32,6 +33,7 @@
 //    LHQLog(@"%@",[[NSBundle mainBundle] infoDictionary]);打印当前app对应的info字典
     
     [LHQPushGuideView show];
+
     
     return YES;
 }
@@ -52,6 +54,9 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    
+    [LHQTopWindow show];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
