@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface UIImage (LHQExtension)
-- (void)setCircleImage;
+//将方形图片切成圆角图片
+- (UIImage *)setCircleImage;
 @end

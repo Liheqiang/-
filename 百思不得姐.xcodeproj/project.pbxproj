@@ -15,6 +15,7 @@
 		DB3CEAB51C8D6B5200F78EEC /* LHQVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEAB21C8D6B5200F78EEC /* LHQVerticalButton.m */; };
 		DB3CEAB81C8D6B6900F78EEC /* LHQTopWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEAB71C8D6B6900F78EEC /* LHQTopWindowViewController.m */; };
 		DB3CEABB1C8DB8F300F78EEC /* UIImage+LHQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEABA1C8DB8F300F78EEC /* UIImage+LHQExtension.m */; };
+		DB3CEABE1C8DBF1000F78EEC /* UIImageView+LHQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEABD1C8DBF1000F78EEC /* UIImageView+LHQExtension.m */; };
 		DB672B431C882B020004AEBB /* LHQTopicComment.m in Sources */ = {isa = PBXBuildFile; fileRef = DB672B421C882B020004AEBB /* LHQTopicComment.m */; };
 		DB672B461C882B190004AEBB /* LHQUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DB672B451C882B190004AEBB /* LHQUser.m */; };
 		DB6AEEF81C8843FE00B4F611 /* LHQPublishView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6AEEF71C8843FE00B4F611 /* LHQPublishView.m */; };
@@ -90,6 +91,8 @@
 		DB3CEAB71C8D6B6900F78EEC /* LHQTopWindowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQTopWindowViewController.m; sourceTree = "<group>"; };
 		DB3CEAB91C8DB8F300F78EEC /* UIImage+LHQExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LHQExtension.h"; sourceTree = "<group>"; };
 		DB3CEABA1C8DB8F300F78EEC /* UIImage+LHQExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LHQExtension.m"; sourceTree = "<group>"; };
+		DB3CEABC1C8DBF1000F78EEC /* UIImageView+LHQExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LHQExtension.h"; sourceTree = "<group>"; };
+		DB3CEABD1C8DBF1000F78EEC /* UIImageView+LHQExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LHQExtension.m"; sourceTree = "<group>"; };
 		DB672B411C882B020004AEBB /* LHQTopicComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQTopicComment.h; sourceTree = "<group>"; };
 		DB672B421C882B020004AEBB /* LHQTopicComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQTopicComment.m; sourceTree = "<group>"; };
 		DB672B441C882B190004AEBB /* LHQUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQUser.h; sourceTree = "<group>"; };
@@ -595,6 +598,8 @@
 				DB6B2D1A1C7B3A7400B39E24 /* NSDate+LHQExtension.m */,
 				DB3CEAB91C8DB8F300F78EEC /* UIImage+LHQExtension.h */,
 				DB3CEABA1C8DB8F300F78EEC /* UIImage+LHQExtension.m */,
+				DB3CEABC1C8DBF1000F78EEC /* UIImageView+LHQExtension.h */,
+				DB3CEABD1C8DBF1000F78EEC /* UIImageView+LHQExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -735,6 +740,7 @@
 				DB6B2D6D1C80146000B39E24 /* LHQTopic.m in Sources */,
 				DBD4BF881C70142200687B65 /* LHQTabBarController.m in Sources */,
 				DB6FBC891C70205500FD12B5 /* LHQNavigationController.m in Sources */,
+				DB3CEABE1C8DBF1000F78EEC /* UIImageView+LHQExtension.m in Sources */,
 				DB6B2D661C7FEC2700B39E24 /* LHQBaseTopicCell.m in Sources */,
 				DB7428C61C868D17000497AA /* LHQTopicVideoView.m in Sources */,
 				DB7428CB1C868D43000497AA /* LHQTopicVoiceView.m in Sources */,

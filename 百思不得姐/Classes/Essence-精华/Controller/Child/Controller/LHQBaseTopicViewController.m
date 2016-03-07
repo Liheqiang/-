@@ -193,7 +193,7 @@ static NSString *const cellId = @"topic";
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     
-    LHQLog(@"%@",NSStringFromCGPoint(scrollView.contentOffset));
+//    LHQLog(@"%@",NSStringFromCGPoint(scrollView.contentOffset));
     
 }
 @end

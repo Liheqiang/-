@@ -31,7 +31,7 @@
     
     _comment = comment;
     //头像
-    [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:comment.user.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.headerImageView downloadImageWithUrlSrting:comment.user.profile_image];
     //昵称
     self.nameLabel.text = comment.user.username;
     //性别

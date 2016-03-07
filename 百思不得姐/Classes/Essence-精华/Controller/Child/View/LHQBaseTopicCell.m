@@ -85,7 +85,7 @@
     
     _topic = topic;
     //头像
-    [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.headerImageView downloadImageWithUrlSrting:topic.profile_image];
     //昵称
     self.nickNameLabel.text = topic.screen_name;
     //创建时间

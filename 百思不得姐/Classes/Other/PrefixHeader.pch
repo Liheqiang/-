@@ -11,6 +11,8 @@
 
 #import "UIView+LHQExtension.h"
 #import "UIBarButtonItem+LHQExtension.h"
+#import "UIImage+LHQExtension.h"
+#import "UIImageView+LHQExtension.h"
 #import "LHQConstant.h"
 
 #pragma mark --- color ---

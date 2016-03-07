@@ -35,7 +35,7 @@
     
     _recommandTag = recommandTag;
     
-    [self.imageListView sd_setImageWithURL:[NSURL URLWithString:recommandTag.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.imageListView downloadImageWithUrlSrting:recommandTag.image_list];
     
     self.themeNameLabel.text = recommandTag.theme_name;
     
