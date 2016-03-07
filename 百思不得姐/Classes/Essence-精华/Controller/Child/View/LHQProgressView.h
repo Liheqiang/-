@@ -6,8 +6,8 @@
 //  Copyright © 2016年 HqLee. All rights reserved.
 //
 
-#import <DACircularProgressView.h>
+#import <DALabeledCircularProgressView.h>
 
-@interface LHQProgressView : DACircularProgressView
+@interface LHQProgressView : DALabeledCircularProgressView
 
 @end

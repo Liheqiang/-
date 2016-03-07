@@ -19,7 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIImageView *gifImageView;
 @property (weak, nonatomic) IBOutlet UIButton *seeBigButton;
-@property (weak, nonatomic) IBOutlet MRCircularProgressView *progressView;
+@property (weak, nonatomic) IBOutlet LHQProgressView *progressView;
 
 @end
 @implementation LHQTopicPictureView
@@ -49,15 +49,13 @@
     _topic = topic;
     
     [self.progressView setProgress:topic.pictureProgress animated:YES];
+    self.progressView.progressLabel.text = [NSString stringWithFormat:@"%f%%",topic.pictureProgress];
     WeakSelf
     //SDWeb如果发现是gif图片，会调用内部imageIO 然后将gif图片转为N个图片，进行播放 animationImages
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.bigImageUrl] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         
         weakSelf.progressView.hidden = NO;//cell的重用
-        CGFloat progressValue = (double)receivedSize / expectedSize;
-        NSString *progress = [NSString stringWithFormat:@"%f",progressValue];
-        progress = [progress stringByReplacingOccurrencesOfString:@"-" withString:@""];//替换负值的情况
-        topic.pictureProgress = [progress integerValue];
+        topic.pictureProgress = receivedSize *1.0 / expectedSize;
         [weakSelf.progressView setProgress:topic.pictureProgress animated:YES];
         
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
