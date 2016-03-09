@@ -73,7 +73,7 @@
     LHQFriendTrendsViewController *friendTrendsVc = [[LHQFriendTrendsViewController alloc] init];
     [self addChildVc:friendTrendsVc title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
     
-    LHQMeViewController *meVc = [[LHQMeViewController alloc] init];
+    LHQMeViewController *meVc = [[LHQMeViewController alloc] initWithStyle:UITableViewStyleGrouped];
     [self addChildVc:meVc title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
     
     //替换系统的 tabBar kvc

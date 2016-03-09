@@ -16,6 +16,12 @@
 		DB3CEAB81C8D6B6900F78EEC /* LHQTopWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEAB71C8D6B6900F78EEC /* LHQTopWindowViewController.m */; };
 		DB3CEABB1C8DB8F300F78EEC /* UIImage+LHQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEABA1C8DB8F300F78EEC /* UIImage+LHQExtension.m */; };
 		DB3CEABE1C8DBF1000F78EEC /* UIImageView+LHQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEABD1C8DBF1000F78EEC /* UIImageView+LHQExtension.m */; };
+		DB3CEB2E1C90599F00F78EEC /* LHQWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEB2C1C90599F00F78EEC /* LHQWebViewController.m */; };
+		DB3CEB2F1C90599F00F78EEC /* LHQWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB3CEB2D1C90599F00F78EEC /* LHQWebViewController.xib */; };
+		DB3CEB3A1C9059D300F78EEC /* LHQSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEB321C9059D300F78EEC /* LHQSquare.m */; };
+		DB3CEB3B1C9059D300F78EEC /* LHQMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEB351C9059D300F78EEC /* LHQMeCell.m */; };
+		DB3CEB3C1C9059D300F78EEC /* LHQMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEB371C9059D300F78EEC /* LHQMeFooterView.m */; };
+		DB3CEB3D1C9059D300F78EEC /* LHQSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEB391C9059D300F78EEC /* LHQSquareButton.m */; };
 		DB672B431C882B020004AEBB /* LHQTopicComment.m in Sources */ = {isa = PBXBuildFile; fileRef = DB672B421C882B020004AEBB /* LHQTopicComment.m */; };
 		DB672B461C882B190004AEBB /* LHQUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DB672B451C882B190004AEBB /* LHQUser.m */; };
 		DB6AEEF81C8843FE00B4F611 /* LHQPublishView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6AEEF71C8843FE00B4F611 /* LHQPublishView.m */; };
@@ -93,6 +99,17 @@
 		DB3CEABA1C8DB8F300F78EEC /* UIImage+LHQExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LHQExtension.m"; sourceTree = "<group>"; };
 		DB3CEABC1C8DBF1000F78EEC /* UIImageView+LHQExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LHQExtension.h"; sourceTree = "<group>"; };
 		DB3CEABD1C8DBF1000F78EEC /* UIImageView+LHQExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LHQExtension.m"; sourceTree = "<group>"; };
+		DB3CEB2B1C90599F00F78EEC /* LHQWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQWebViewController.h; sourceTree = "<group>"; };
+		DB3CEB2C1C90599F00F78EEC /* LHQWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQWebViewController.m; sourceTree = "<group>"; };
+		DB3CEB2D1C90599F00F78EEC /* LHQWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LHQWebViewController.xib; sourceTree = "<group>"; };
+		DB3CEB311C9059D300F78EEC /* LHQSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQSquare.h; sourceTree = "<group>"; };
+		DB3CEB321C9059D300F78EEC /* LHQSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQSquare.m; sourceTree = "<group>"; };
+		DB3CEB341C9059D300F78EEC /* LHQMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQMeCell.h; sourceTree = "<group>"; };
+		DB3CEB351C9059D300F78EEC /* LHQMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQMeCell.m; sourceTree = "<group>"; };
+		DB3CEB361C9059D300F78EEC /* LHQMeFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQMeFooterView.h; sourceTree = "<group>"; };
+		DB3CEB371C9059D300F78EEC /* LHQMeFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQMeFooterView.m; sourceTree = "<group>"; };
+		DB3CEB381C9059D300F78EEC /* LHQSquareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQSquareButton.h; sourceTree = "<group>"; };
+		DB3CEB391C9059D300F78EEC /* LHQSquareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQSquareButton.m; sourceTree = "<group>"; };
 		DB672B411C882B020004AEBB /* LHQTopicComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQTopicComment.h; sourceTree = "<group>"; };
 		DB672B421C882B020004AEBB /* LHQTopicComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQTopicComment.m; sourceTree = "<group>"; };
 		DB672B441C882B190004AEBB /* LHQUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQUser.h; sourceTree = "<group>"; };
@@ -284,6 +301,28 @@
 				DB3CEAB01C8D6B5200F78EEC /* LHQTopWindow.m */,
 				DB3CEAB11C8D6B5200F78EEC /* LHQVerticalButton.h */,
 				DB3CEAB21C8D6B5200F78EEC /* LHQVerticalButton.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB3CEB301C9059D300F78EEC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB3CEB311C9059D300F78EEC /* LHQSquare.h */,
+				DB3CEB321C9059D300F78EEC /* LHQSquare.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DB3CEB331C9059D300F78EEC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB3CEB341C9059D300F78EEC /* LHQMeCell.h */,
+				DB3CEB351C9059D300F78EEC /* LHQMeCell.m */,
+				DB3CEB361C9059D300F78EEC /* LHQMeFooterView.h */,
+				DB3CEB371C9059D300F78EEC /* LHQMeFooterView.m */,
+				DB3CEB381C9059D300F78EEC /* LHQSquareButton.h */,
+				DB3CEB391C9059D300F78EEC /* LHQSquareButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -512,9 +551,9 @@
 		DBD4BF741C70142200687B65 /* Me-我 */ = {
 			isa = PBXGroup;
 			children = (
+				DB3CEB301C9059D300F78EEC /* Model */,
+				DB3CEB331C9059D300F78EEC /* View */,
 				DBD4BF751C70142200687B65 /* Controller */,
-				DBD4BF781C70142200687B65 /* Model */,
-				DBD4BF791C70142200687B65 /* View */,
 			);
 			path = "Me-我";
 			sourceTree = "<group>";
@@ -524,22 +563,11 @@
 			children = (
 				DBD4BF761C70142200687B65 /* LHQMeViewController.h */,
 				DBD4BF771C70142200687B65 /* LHQMeViewController.m */,
+				DB3CEB2B1C90599F00F78EEC /* LHQWebViewController.h */,
+				DB3CEB2C1C90599F00F78EEC /* LHQWebViewController.m */,
+				DB3CEB2D1C90599F00F78EEC /* LHQWebViewController.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		DBD4BF781C70142200687B65 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		DBD4BF791C70142200687B65 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		DBD4BF7A1C70142200687B65 /* New-新帖 */ = {
@@ -681,6 +709,7 @@
 				DB6B2D721C83E13400B39E24 /* LHQTopicPictureView.xib in Resources */,
 				DB1BEB211C6F778D00F3FCA7 /* Assets.xcassets in Resources */,
 				DB7EC0301C744E610012AD13 /* LHQLoginViewController.xib in Resources */,
+				DB3CEB2F1C90599F00F78EEC /* LHQWebViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,6 +753,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB3CEB3C1C9059D300F78EEC /* LHQMeFooterView.m in Sources */,
 				DB7EC03B1C755D300012AD13 /* LHQPushGuideView.m in Sources */,
 				DB6B2D201C7B622000B39E24 /* LHQConstant.m in Sources */,
 				DB7EC05E1C75B0500012AD13 /* LHQVideoViewController.m in Sources */,
@@ -749,6 +779,7 @@
 				DB3CEAB31C8D6B5200F78EEC /* LHQTextField.m in Sources */,
 				DB7EBFFB1C736C130012AD13 /* LHQRecommandTagsViewController.m in Sources */,
 				DBD4BF871C70142200687B65 /* LHQFriendTrendsViewController.m in Sources */,
+				DB3CEB2E1C90599F00F78EEC /* LHQWebViewController.m in Sources */,
 				DBCDD18C1C84543C00F1452C /* LHQShowPictureViewController.m in Sources */,
 				DB6AEF011C8875A800B4F611 /* LHQCommentViewController.m in Sources */,
 				DB7EC05C1C75B0500012AD13 /* LHQPictureViewController.m in Sources */,
@@ -756,9 +787,11 @@
 				DBCDD1881C84525700F1452C /* LHQProgressView.m in Sources */,
 				DB6B2D701C83E11D00B39E24 /* LHQTopicPictureView.m in Sources */,
 				DB3CEAB51C8D6B5200F78EEC /* LHQVerticalButton.m in Sources */,
+				DB3CEB3B1C9059D300F78EEC /* LHQMeCell.m in Sources */,
 				DB6B2D1B1C7B3A7400B39E24 /* NSDate+LHQExtension.m in Sources */,
 				DB7EC05B1C75B0500012AD13 /* LHQAllViewController.m in Sources */,
 				DB7EC05F1C75B0500012AD13 /* LHQVoiceViewController.m in Sources */,
+				DB3CEB3D1C9059D300F78EEC /* LHQSquareButton.m in Sources */,
 				DB6B2D6A1C7FEC4C00B39E24 /* LHQBaseTopicViewController.m in Sources */,
 				DB6B2D621C7FEBF800B39E24 /* LHQWordViewController.m in Sources */,
 				DB6FBC831C7015B700FD12B5 /* LHQTabBar.m in Sources */,
@@ -767,6 +800,7 @@
 				DB6AEEF81C8843FE00B4F611 /* LHQPublishView.m in Sources */,
 				DBD4BF8B1C70142200687B65 /* UIView+LHQExtension.m in Sources */,
 				DB7EC0021C736D590012AD13 /* LHQRecommandTagCell.m in Sources */,
+				DB3CEB3A1C9059D300F78EEC /* LHQSquare.m in Sources */,
 				DB6FBC941C71719700FD12B5 /* LHQRecommandCategoryCell.m in Sources */,
 				DB6FBC9D1C71785C00FD12B5 /* LHQRecommandCategory.m in Sources */,
 				DB3CEAB81C8D6B6900F78EEC /* LHQTopWindowViewController.m in Sources */,

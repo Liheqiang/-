@@ -28,8 +28,6 @@
     return @"newlist";
 }
 
-
-
 - (void)mainTagClick{
     
 }
