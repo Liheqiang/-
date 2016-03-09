@@ -31,6 +31,7 @@
 @end
 
 @implementation LHQEssenceViewController
+- (NSString *)a{return @"list";};
 #pragma --- lazy load ---
 - (NSMutableArray *)buttones{
     if (!_buttones) {
@@ -66,22 +67,27 @@
     
     LHQAllViewController *allVc = [[LHQAllViewController alloc] initWithStyle:UITableViewStylePlain];
     allVc.title = @"全部";
+    allVc.a = self.a;
     [self addChildViewController:allVc];
     
     LHQVideoViewController *videoVc = [[LHQVideoViewController alloc] initWithStyle:UITableViewStylePlain];
     videoVc.title = @"视频";
+    videoVc.a = self.a;
     [self addChildViewController:videoVc];
     
     LHQVoiceViewController *voiceVc = [[LHQVoiceViewController alloc] initWithStyle:UITableViewStylePlain];
     voiceVc.title = @"声音";
+    voiceVc.a = self.a;
     [self addChildViewController:voiceVc];
     
     LHQPictureViewController *pictureVc = [[LHQPictureViewController alloc] initWithStyle:UITableViewStylePlain];
     pictureVc.title = @"图片";
+    pictureVc.a = self.a;
     [self addChildViewController:pictureVc];
     
     LHQWordViewController *wordVc = [[LHQWordViewController alloc] initWithStyle:UITableViewStylePlain];
     wordVc.title = @"段子";
+    wordVc.a = self.a;
     [self addChildViewController:wordVc];
 }
 
@@ -206,7 +212,6 @@
     CGPoint offset = scrollView.contentOffset;
     NSInteger index = offset.x / self.contentView.width;
     UITableViewController *tableViewVc = self.childViewControllers[index];
-    
     if (tableViewVc.isViewLoaded) { //避免多次加载
         return;
     }

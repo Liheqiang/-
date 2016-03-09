@@ -28,3 +28,5 @@ UIKIT_EXTERN CGFloat const navigationBarHeight;
 UIKIT_EXTERN CGFloat const titleViewHeight;
 /** 热门评论Label的高度 */
 UIKIT_EXTERN CGFloat const hotCommentLabelHeight;
+/** tabBar选中的通知 */
+UIKIT_EXTERN NSString *const LHQTabBarSelectedNotification;

@@ -22,3 +22,5 @@ CGFloat const navigationBarHeight = 64.0f;
 CGFloat const titleViewHeight = 30.0f;
 /** 热门评论Label的高度 */
 CGFloat const hotCommentLabelHeight = 20.0f;
+/** tabBar选中的通知 */
+NSString *const LHQTabBarSelectedNotification = @"LHQTabBarSelectedNotification";

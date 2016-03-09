@@ -29,9 +29,9 @@
 static NSString *const cellId = @"topic";
 
 @implementation LHQBaseTopicViewController
-#pragma mark --- lazy load ---
+#pragma mark -- 请求参数
 - (LHQTopicType)type{return 0;};
-
+#pragma mark --- lazy load ---
 - (NSMutableDictionary *)params{
     if (_params) {
         return _params;
@@ -60,7 +60,7 @@ static NSString *const cellId = @"topic";
 #pragma mark --- private method ---
 - (void)configParams{
     
-    NSDictionary *params = @{@"a":@"list",
+    NSDictionary *params = @{@"a":self.a,
                              @"c":@"data",
                              @"maxtime":@(0),
                              @"type":@(self.type),

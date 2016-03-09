@@ -32,6 +32,7 @@
 #define kScreenWidth [[UIScreen mainScreen] bounds].size.width
 #define kScreenHeight [[UIScreen mainScreen] bounds].size.height
 #define kScreenCenter CGPointMake(kScreenWidth / 2, kScreenHeight / 2)
+#define LHQNotificationCenter [NSNotificationCenter defaultCenter]
 
 #define LHQLogFun LHQLog(@"%s",__func__);
 

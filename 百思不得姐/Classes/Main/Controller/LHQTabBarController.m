@@ -45,21 +45,14 @@
     
 }
 
-/**
- *  为毛先调用viewDidLoad 在调用init
- *
- */
-//- (instancetype)init{
-//    
-//    if (self = [super init]) {
-//        
-//        NSLog(@"%s",__func__);
-//        
-//    }
-//    
-//    return self;
-//    
-//}
+
+- (void)buttonClick{
+    
+    UITabBarController *tabBar = (UITabBarController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+    LHQLogFun
+    LHQLog(@"%@",tabBar.selectedViewController);
+    
+}
 
 - (void)viewDidLoad {
     
@@ -86,6 +79,9 @@
     //替换系统的 tabBar kvc
     [self setValue:[[LHQTabBar alloc] init] forKey:@"tabBar"];
     
+    //注册监听
+    [LHQNotificationCenter addObserver:self selector:@selector(buttonClick) name:LHQTabBarSelectedNotification object:nil];
+    
 }
 
 #pragma mark --- private method ---
@@ -99,11 +95,5 @@
     [self addChildViewController:navi];
     
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end

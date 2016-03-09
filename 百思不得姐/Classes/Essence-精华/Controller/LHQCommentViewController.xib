@@ -18,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bje-R1-Vg8" userLabel="评论列表">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="JKp-xH-y4j"/>
@@ -67,12 +67,12 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="bje-R1-Vg8" secondAttribute="bottom" id="0Eb-Ja-heS"/>
                 <constraint firstAttribute="trailing" secondItem="bje-R1-Vg8" secondAttribute="trailing" id="E9L-yr-YIt"/>
                 <constraint firstItem="yYc-Bd-1UE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Jpi-QR-zI5"/>
                 <constraint firstAttribute="bottom" secondItem="yYc-Bd-1UE" secondAttribute="bottom" id="QIH-S4-ToE"/>
                 <constraint firstAttribute="trailing" secondItem="yYc-Bd-1UE" secondAttribute="trailing" id="XE6-xY-3BR"/>
                 <constraint firstItem="bje-R1-Vg8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YVq-sw-Ddl"/>
+                <constraint firstItem="yYc-Bd-1UE" firstAttribute="top" secondItem="bje-R1-Vg8" secondAttribute="bottom" id="vF8-c8-ezO"/>
                 <constraint firstItem="bje-R1-Vg8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="who-2U-zI4"/>
             </constraints>
         </view>

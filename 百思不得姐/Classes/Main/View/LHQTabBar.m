@@ -47,15 +47,21 @@
     CGFloat buttonW = width / 5;
     CGFloat buttonH = height;
     
-    for (UIView *subView in self.subviews) {
+    for (UIControl *subView in self.subviews) {
         //排除非UITabBarButton 和手动添加的按钮
         if (![subView isKindOfClass:[UIControl class]] || subView == self.publicButton) continue;
         
         buttonX = buttonW * (index > 1 ? index + 1 :index);
         subView.frame = CGRectMake(buttonX, buttonY, buttonW, buttonH);
-        
+        [subView addTarget:self action:@selector(buttonSelected) forControlEvents:UIControlEventTouchDown];
         index ++;
     }
+    
+}
+
+- (void)buttonSelected{
+    
+    [LHQNotificationCenter postNotificationName:LHQTabBarSelectedNotification object:nil];
     
 }
 
