@@ -82,9 +82,9 @@ static NSString *const tagCellId = @"tag";
     params[@"c"] = @"topic";
     [[AFHTTPSessionManager manager] GET:requestUrl parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        [weakSelf.tableView.header endRefreshing];//头部结束刷新
+        [weakSelf.tableView.mj_header endRefreshing];//头部结束刷新
         
-        [weakSelf.tableView.footer resetNoMoreData];
+        [weakSelf.tableView.mj_footer resetNoMoreData];
         
         weakSelf.page = 2;
         
@@ -101,7 +101,7 @@ static NSString *const tagCellId = @"tag";
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
-        [weakSelf.tableView.header endRefreshing];
+        [weakSelf.tableView.mj_header endRefreshing];
         [SVProgressHUD showErrorWithStatus:@"数据加载失败"];
         
     }];
@@ -124,9 +124,9 @@ static NSString *const tagCellId = @"tag";
         NSArray *tags = [LHQRecommandTag mj_objectArrayWithKeyValuesArray:responseObject];
         
         if (tags.count == 0) {
-            [weakSelf.tableView.footer noticeNoMoreData];
+            [weakSelf.tableView.mj_footer endRefreshingWithNoMoreData];
         }else{
-            [weakSelf.tableView.footer endRefreshing];
+            [weakSelf.tableView.mj_footer endRefreshing];
             [weakSelf.tags addObjectsFromArray:tags];
         }
         
@@ -134,7 +134,7 @@ static NSString *const tagCellId = @"tag";
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
-        [weakSelf.tableView.footer endRefreshing];
+        [weakSelf.tableView.mj_footer endRefreshing];
         [SVProgressHUD showErrorWithStatus:@"数据加载失败"];
         
     }];
@@ -143,14 +143,14 @@ static NSString *const tagCellId = @"tag";
 
 - (void)refreshController{
     
-    [self.tableView.header beginRefreshing];
+    [self.tableView.mj_header beginRefreshing];
     
 }
 
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    self.tableView.footer.hidden = (self.tags.count == 0);
+    self.tableView.mj_footer.hidden = (self.tags.count == 0);
     return self.tags.count;
 }
 

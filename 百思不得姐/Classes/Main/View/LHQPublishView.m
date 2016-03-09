@@ -21,6 +21,8 @@ static CGFloat const margin = 20.f;
 
 @implementation LHQPublishView
 
+static UIWindow *window_;
+
 + (instancetype)publishView{
     
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
@@ -29,14 +31,15 @@ static CGFloat const margin = 20.f;
 + (void)show{
     
     LHQPublishView *publishView = [LHQPublishView publishView];
-    UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    publishView.frame = window.bounds;
-    [window addSubview:publishView];
+    window_ = [UIApplication sharedApplication].keyWindow;
+    publishView.frame = window_.bounds;
+    [window_ addSubview:publishView];
 }
 
 - (void)awakeFromNib{
     
     self.userInteractionEnabled = NO;
+    window_.userInteractionEnabled = NO;
     NSArray *images = @[@"publish-video",@"publish-picture",@"publish-text",@"publish-audio",@"publish-review",@"publish-offline"];
     NSArray *titles = @[@"发视频",@"发图片",@"发段子",@"发声音",@"审帖",@"离线"];
     CGFloat buttonX = 0;
@@ -81,6 +84,7 @@ static CGFloat const margin = 20.f;
     WeakSelf
     [anim setCompletionBlock:^(POPAnimation *anim, BOOL finished) {
         weakSelf.userInteractionEnabled = YES;
+        window_.userInteractionEnabled = YES;
     }];
 
 }
@@ -89,6 +93,7 @@ static CGFloat const margin = 20.f;
     
     WeakSelf
     self.userInteractionEnabled = NO;
+    window_.userInteractionEnabled = NO;
     NSInteger startIndex = 2;
     for (NSInteger i = startIndex; i < self.subviews.count; i ++) {
         UIView *subview = self.subviews[i];
@@ -105,6 +110,10 @@ static CGFloat const margin = 20.f;
         }
     }
     
+}
+
+- (void)dealloc{
+    window_.userInteractionEnabled = YES;
 }
 
 - (void)buttonClick:(UIButton *)button{
