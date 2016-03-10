@@ -22,10 +22,11 @@
 		DB3CEB3B1C9059D300F78EEC /* LHQMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEB351C9059D300F78EEC /* LHQMeCell.m */; };
 		DB3CEB3C1C9059D300F78EEC /* LHQMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEB371C9059D300F78EEC /* LHQMeFooterView.m */; };
 		DB3CEB3D1C9059D300F78EEC /* LHQSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEB391C9059D300F78EEC /* LHQSquareButton.m */; };
+		DB3CEB441C913D0700F78EEC /* LHQPublishView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEB421C913D0700F78EEC /* LHQPublishView.m */; };
+		DB3CEB451C913D0700F78EEC /* LHQPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB3CEB431C913D0700F78EEC /* LHQPublishView.xib */; };
+		DB3CEB481C913D2000F78EEC /* LHQPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEB471C913D2000F78EEC /* LHQPublishViewController.m */; };
 		DB672B431C882B020004AEBB /* LHQTopicComment.m in Sources */ = {isa = PBXBuildFile; fileRef = DB672B421C882B020004AEBB /* LHQTopicComment.m */; };
 		DB672B461C882B190004AEBB /* LHQUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DB672B451C882B190004AEBB /* LHQUser.m */; };
-		DB6AEEF81C8843FE00B4F611 /* LHQPublishView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6AEEF71C8843FE00B4F611 /* LHQPublishView.m */; };
-		DB6AEEFA1C88440900B4F611 /* LHQPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6AEEF91C88440900B4F611 /* LHQPublishView.xib */; };
 		DB6AEF011C8875A800B4F611 /* LHQCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6AEEFF1C8875A800B4F611 /* LHQCommentViewController.m */; };
 		DB6AEF021C8875A800B4F611 /* LHQCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6AEF001C8875A800B4F611 /* LHQCommentViewController.xib */; };
 		DB6AEF351C8C733900B4F611 /* LHQCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6AEF331C8C733900B4F611 /* LHQCommentCell.m */; };
@@ -110,13 +111,15 @@
 		DB3CEB371C9059D300F78EEC /* LHQMeFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQMeFooterView.m; sourceTree = "<group>"; };
 		DB3CEB381C9059D300F78EEC /* LHQSquareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQSquareButton.h; sourceTree = "<group>"; };
 		DB3CEB391C9059D300F78EEC /* LHQSquareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQSquareButton.m; sourceTree = "<group>"; };
+		DB3CEB411C913D0700F78EEC /* LHQPublishView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQPublishView.h; sourceTree = "<group>"; };
+		DB3CEB421C913D0700F78EEC /* LHQPublishView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQPublishView.m; sourceTree = "<group>"; };
+		DB3CEB431C913D0700F78EEC /* LHQPublishView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LHQPublishView.xib; sourceTree = "<group>"; };
+		DB3CEB461C913D2000F78EEC /* LHQPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQPublishViewController.h; sourceTree = "<group>"; };
+		DB3CEB471C913D2000F78EEC /* LHQPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQPublishViewController.m; sourceTree = "<group>"; };
 		DB672B411C882B020004AEBB /* LHQTopicComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQTopicComment.h; sourceTree = "<group>"; };
 		DB672B421C882B020004AEBB /* LHQTopicComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQTopicComment.m; sourceTree = "<group>"; };
 		DB672B441C882B190004AEBB /* LHQUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQUser.h; sourceTree = "<group>"; };
 		DB672B451C882B190004AEBB /* LHQUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQUser.m; sourceTree = "<group>"; };
-		DB6AEEF61C8843FE00B4F611 /* LHQPublishView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQPublishView.h; sourceTree = "<group>"; };
-		DB6AEEF71C8843FE00B4F611 /* LHQPublishView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQPublishView.m; sourceTree = "<group>"; };
-		DB6AEEF91C88440900B4F611 /* LHQPublishView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LHQPublishView.xib; sourceTree = "<group>"; };
 		DB6AEEFE1C8875A800B4F611 /* LHQCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQCommentViewController.h; sourceTree = "<group>"; };
 		DB6AEEFF1C8875A800B4F611 /* LHQCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQCommentViewController.m; sourceTree = "<group>"; };
 		DB6AEF001C8875A800B4F611 /* LHQCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LHQCommentViewController.xib; sourceTree = "<group>"; };
@@ -327,6 +330,34 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		DB3CEB3E1C913D0700F78EEC /* Publish */ = {
+			isa = PBXGroup;
+			children = (
+				DB3CEB3F1C913D0700F78EEC /* Controller */,
+				DB3CEB401C913D0700F78EEC /* View */,
+			);
+			path = Publish;
+			sourceTree = "<group>";
+		};
+		DB3CEB3F1C913D0700F78EEC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DB3CEB461C913D2000F78EEC /* LHQPublishViewController.h */,
+				DB3CEB471C913D2000F78EEC /* LHQPublishViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DB3CEB401C913D0700F78EEC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB3CEB411C913D0700F78EEC /* LHQPublishView.h */,
+				DB3CEB421C913D0700F78EEC /* LHQPublishView.m */,
+				DB3CEB431C913D0700F78EEC /* LHQPublishView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DB7EC04D1C75B0500012AD13 /* Child */ = {
 			isa = PBXGroup;
 			children = (
@@ -401,6 +432,7 @@
 			children = (
 				DBD4BF601C70142200687B65 /* AppDelegate.h */,
 				DBD4BF611C70142200687B65 /* AppDelegate.m */,
+				DB3CEB3E1C913D0700F78EEC /* Publish */,
 				DBD4BF6E1C70142200687B65 /* Main */,
 				DBD4BF621C70142200687B65 /* Essence-精华 */,
 				DBD4BF7A1C70142200687B65 /* New-新帖 */,
@@ -538,9 +570,6 @@
 			children = (
 				DB6FBC811C7015B700FD12B5 /* LHQTabBar.h */,
 				DB6FBC821C7015B700FD12B5 /* LHQTabBar.m */,
-				DB6AEEF61C8843FE00B4F611 /* LHQPublishView.h */,
-				DB6AEEF71C8843FE00B4F611 /* LHQPublishView.m */,
-				DB6AEEF91C88440900B4F611 /* LHQPublishView.xib */,
 				DB7EC0391C755D300012AD13 /* LHQPushGuideView.h */,
 				DB7EC03A1C755D300012AD13 /* LHQPushGuideView.m */,
 				DB7EC03C1C755D390012AD13 /* LHQPushGuideView.xib */,
@@ -694,8 +723,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB7428C81C868D2C000497AA /* LHQTopicVideoView.xib in Resources */,
+				DB3CEB451C913D0700F78EEC /* LHQPublishView.xib in Resources */,
 				DB6FBC9A1C7171AE00FD12B5 /* LHQRecommandUserCell.xib in Resources */,
-				DB6AEEFA1C88440900B4F611 /* LHQPublishView.xib in Resources */,
 				DB7428CD1C868D56000497AA /* LHQTopicVoiceView.xib in Resources */,
 				DB7EC0031C736D590012AD13 /* LHQRecommandTagCell.xib in Resources */,
 				DBCDD18D1C84543C00F1452C /* LHQShowPictureViewController.xib in Resources */,
@@ -788,6 +817,7 @@
 				DB6B2D701C83E11D00B39E24 /* LHQTopicPictureView.m in Sources */,
 				DB3CEAB51C8D6B5200F78EEC /* LHQVerticalButton.m in Sources */,
 				DB3CEB3B1C9059D300F78EEC /* LHQMeCell.m in Sources */,
+				DB3CEB481C913D2000F78EEC /* LHQPublishViewController.m in Sources */,
 				DB6B2D1B1C7B3A7400B39E24 /* NSDate+LHQExtension.m in Sources */,
 				DB7EC05B1C75B0500012AD13 /* LHQAllViewController.m in Sources */,
 				DB7EC05F1C75B0500012AD13 /* LHQVoiceViewController.m in Sources */,
@@ -797,13 +827,13 @@
 				DB6FBC831C7015B700FD12B5 /* LHQTabBar.m in Sources */,
 				DB672B431C882B020004AEBB /* LHQTopicComment.m in Sources */,
 				DBD4BF8A1C70142200687B65 /* LHQNewViewController.m in Sources */,
-				DB6AEEF81C8843FE00B4F611 /* LHQPublishView.m in Sources */,
 				DBD4BF8B1C70142200687B65 /* UIView+LHQExtension.m in Sources */,
 				DB7EC0021C736D590012AD13 /* LHQRecommandTagCell.m in Sources */,
 				DB3CEB3A1C9059D300F78EEC /* LHQSquare.m in Sources */,
 				DB6FBC941C71719700FD12B5 /* LHQRecommandCategoryCell.m in Sources */,
 				DB6FBC9D1C71785C00FD12B5 /* LHQRecommandCategory.m in Sources */,
 				DB3CEAB81C8D6B6900F78EEC /* LHQTopWindowViewController.m in Sources */,
+				DB3CEB441C913D0700F78EEC /* LHQPublishView.m in Sources */,
 				DBD4BF861C70142200687B65 /* LHQEssenceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
