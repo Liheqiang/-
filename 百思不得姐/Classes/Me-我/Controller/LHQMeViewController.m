@@ -36,7 +36,6 @@ static NSString *const meCellId = @"me";
 
 - (void)setupTableView{
     
-    LHQLog(@"%@",NSStringFromUIEdgeInsets(self.tableView.contentInset));
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerClass:[LHQMeCell class] forCellReuseIdentifier:meCellId];
     self.tableView.backgroundColor = LHQGlobalBg;

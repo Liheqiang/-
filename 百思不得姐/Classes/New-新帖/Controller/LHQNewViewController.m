@@ -24,10 +24,6 @@
     self.view.backgroundColor = LHQGlobalBg;
 }
 
-- (NSString *)a{
-    return @"newlist";
-}
-
 - (void)mainTagClick{
     
 }

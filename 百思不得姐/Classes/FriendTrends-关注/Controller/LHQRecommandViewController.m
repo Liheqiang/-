@@ -254,8 +254,8 @@ static NSString *const userCellId = @"user";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    [self.userTableView.header endRefreshing];
-    [self.userTableView.footer endRefreshing];
+    [self.userTableView.mj_header endRefreshing];
+    [self.userTableView.mj_footer endRefreshing];
     
     if (tableView == self.categoryTableView) {
         
@@ -269,7 +269,7 @@ static NSString *const userCellId = @"user";
             // 赶紧刷新表格,目的是: 马上显示当前category的用户数据, 不让用户看见上一个category的残留数据
             [self.userTableView reloadData]; 
             
-            [self.userTableView.header beginRefreshing];
+            [self.userTableView.mj_header beginRefreshing];
             
         }
     }

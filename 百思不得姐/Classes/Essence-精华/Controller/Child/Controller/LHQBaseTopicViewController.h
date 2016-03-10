@@ -12,6 +12,4 @@
 //帖子类型
 //@property (nonatomic, assign) LHQTopicType type;
 - (LHQTopicType)type;
-//请求的参数
-@property (nonatomic, copy) NSString *a;
 @end

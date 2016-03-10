@@ -8,6 +8,7 @@
 
 #import "LHQBaseTopicViewController.h"
 #import "LHQCommentViewController.h"
+#import "LHQNewViewController.h"
 #import "LHQBaseTopicCell.h"
 #import "LHQTopic.h"
 #import <AFNetworking.h>
@@ -23,6 +24,7 @@
 @property (nonatomic, assign) NSInteger maxTime;
 @property (nonatomic, assign) NSInteger count;
 @property (nonatomic, assign) NSInteger page;
+@property (nonatomic, assign) NSInteger lastSelectedIndex;
 
 @end
 
@@ -57,6 +59,11 @@ static NSString *const cellId = @"topic";
     [self firstRefresh];
 }
 
+- (NSString *)a{
+    
+    return [self.parentViewController isKindOfClass:[LHQNewViewController class]] ? @"newlist":@"list";
+}
+
 #pragma mark --- private method ---
 - (void)configParams{
     
@@ -87,6 +94,18 @@ static NSString *const cellId = @"topic";
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
     self.tableView.mj_header.automaticallyChangeAlpha = YES;
     self.tableView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    //监听Tabbar的点击
+    [LHQNotificationCenter addObserver:self selector:@selector(tabBarSelect) name:LHQTabBarDidSelectedNotification object:nil];
+}
+
+- (void)tabBarSelect{
+    
+    LHQLog(@"%zd,,,%zd,%d",self.tabBarController.selectedIndex,self.lastSelectedIndex,self.tableView.isShowingOnKeyWindow);
+    if (self.tabBarController.selectedIndex == self.lastSelectedIndex && self.view.isShowingOnKeyWindow){
+        [self.tableView.mj_header beginRefreshing];
+    }
+    //纪录上一次选中的索引
+    self.lastSelectedIndex = self.tabBarController.selectedIndex;
 }
 
 - (void)loadNewData{
@@ -145,8 +164,7 @@ static NSString *const cellId = @"topic";
 }
 
 - (void)firstRefresh{
-    
-    LHQLog(@"%@",self.params);
+
     [self.tableView.mj_header beginRefreshing];
 }
 

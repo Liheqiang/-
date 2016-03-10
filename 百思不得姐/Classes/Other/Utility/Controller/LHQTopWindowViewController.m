@@ -38,43 +38,12 @@
         [self searchScrollViewInView:tableView];
         
         if (![tableView isKindOfClass:[UIScrollView class]])continue;
-        
-        UIWindow *window = tableView.window;
-        //将本身转换到另一个坐标系
-        CGRect newFrame = [tableView convertRect:tableView.bounds toView:window];
-        CGRect windowBounds = window.bounds;
-        
-        BOOL isIntersectsRect = CGRectIntersectsRect(newFrame, windowBounds);
-        if (!isIntersectsRect) continue;
-            CGPoint offset = CGPointMake(0, -tableView.contentInset.top);
+        if (!tableView.isShowingOnKeyWindow) continue;
+            CGPoint offset = tableView.contentOffset;
+            offset.y = -tableView.contentInset.top;
             [tableView setContentOffset:offset animated:YES];
     }
     
-}
-
-/**
- * 搜索superview内部的所有子控件
- */
-- (void)searchSubviews:(UIView *)superview
-{
-    for (UIScrollView *scrollView in superview.subviews) {
-        [self searchSubviews:scrollView];
-        
-        // 判断是否为scrollView
-        if (![scrollView isKindOfClass:[UIScrollView class]]) continue;
-        
-        // 计算出scrollView在window坐标系上的矩形框
-        CGRect scrollViewRect = [scrollView convertRect:scrollView.bounds toView:scrollView.window];
-        CGRect windowRect = scrollView.window.bounds;
-        // 判断scrollView的边框是否和window的边框交叉
-        if (!CGRectIntersectsRect(scrollViewRect, windowRect)) continue;
-        
-        // 让scrollView滚动到最前面
-        CGPoint offset = scrollView.contentOffset;
-        // 偏移量不一定是0
-        offset.y = - scrollView.contentInset.top;
-        [scrollView setContentOffset:offset animated:YES];
-    }
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{

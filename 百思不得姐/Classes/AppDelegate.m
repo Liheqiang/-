@@ -11,7 +11,7 @@
 #import "LHQPushGuideView.h"
 #import "LHQTopWindow.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<UITabBarControllerDelegate>
 
 @end
 
@@ -25,9 +25,8 @@
     self.window.frame = [UIScreen mainScreen].bounds;
     
     LHQTabBarController *tabBar = [[LHQTabBarController alloc] init];
-    
+    tabBar.delegate = self;
     self.window.rootViewController = tabBar;
-    
     [self.window makeKeyAndVisible];
     
 //    LHQLog(@"%@",[[NSBundle mainBundle] infoDictionary]);打印当前app对应的info字典
@@ -36,6 +35,11 @@
 
     
     return YES;
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

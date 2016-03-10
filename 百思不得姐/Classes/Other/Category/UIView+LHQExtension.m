@@ -109,4 +109,17 @@
     return self.frame.size;
 }
 
+- (BOOL)isShowingOnKeyWindow{//判断一个视图是否在主窗口显示
+    
+    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+    
+    // 计算出self在主窗口坐标系上的矩形框
+//    CGRect selfRect = [self convertRect:self.bounds toView:keyWindow];
+    CGRect selfRect = [keyWindow convertRect:self.frame fromView:self.superview];
+    CGRect windowRect = keyWindow.bounds;
+    // 判断scrollView的边框是否和window的边框交叉 
+    return self.hidden == NO && self.alpha > 0.01 && self.window && CGRectIntersectsRect(selfRect, windowRect);
+    
+}
+
 @end

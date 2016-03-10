@@ -9,5 +9,4 @@
 #import <UIKit/UIKit.h>
 
 @interface LHQEssenceViewController : UIViewController
-- (NSString *)a;
 @end

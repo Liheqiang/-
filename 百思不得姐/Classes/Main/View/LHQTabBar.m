@@ -21,6 +21,7 @@
     
     if (self = [super init]) {
         
+        [self setBackgroundImage:[UIImage imageNamed:@"tabbar-light"]];
         UIButton *publicButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [publicButton setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
         [publicButton setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateHighlighted];
@@ -36,6 +37,7 @@
     
     [super layoutSubviews];
     
+    static BOOL isAdd = YES;
     
     CGFloat width = self.width;
     CGFloat height = self.height;
@@ -47,21 +49,25 @@
     CGFloat buttonW = width / 5;
     CGFloat buttonH = height;
     
-    for (UIControl *subView in self.subviews) {
+    for (UIControl *button in self.subviews) {
         //排除非UITabBarButton 和手动添加的按钮
-        if (![subView isKindOfClass:[UIControl class]] || subView == self.publicButton) continue;
-        
+        if (![button isKindOfClass:[UIControl class]] || button == self.publicButton) continue;
         buttonX = buttonW * (index > 1 ? index + 1 :index);
-        subView.frame = CGRectMake(buttonX, buttonY, buttonW, buttonH);
-        [subView addTarget:self action:@selector(buttonSelected) forControlEvents:UIControlEventTouchDown];
+        button.frame = CGRectMake(buttonX, buttonY, buttonW, buttonH);
+        if (isAdd) {
+#warning 问题出在这里！！！！！UIControlEventTouchUpInside  之前使用的是UIControlEventTouchDown 导致选中的一直出错!!!!
+            [button addTarget:self action:@selector(buttonSelected) forControlEvents:UIControlEventTouchUpInside];
+        }
+
         index ++;
     }
+    isAdd = NO;
     
 }
 
 - (void)buttonSelected{
     
-    [LHQNotificationCenter postNotificationName:LHQTabBarSelectedNotification object:nil];
+    [LHQNotificationCenter postNotificationName:LHQTabBarDidSelectedNotification object:nil userInfo:nil];
     
 }
 
