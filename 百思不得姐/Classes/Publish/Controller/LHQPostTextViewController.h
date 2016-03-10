@@ -1,5 +1,5 @@
 //
-//  LHQPublishViewController.h
+//  LHQPostTextViewController.h
 //  百思不得姐
 //
 //  Created by HqLee on 16/3/10.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LHQPublishViewController : UIViewController
+@interface LHQPostTextViewController : UIViewController
 
 @end
