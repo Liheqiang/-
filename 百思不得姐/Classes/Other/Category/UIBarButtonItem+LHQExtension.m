@@ -20,16 +20,4 @@
     return [[UIBarButtonItem alloc] initWithCustomView:button];
 }
 
-//+ (instancetype)itemWithTitle:(NSString *)title Image:(NSString *)image highlightedImage:(NSString *)highlightedImage target:(id)target action:(SEL)action{
-//    
-//    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [button setTitle:title forState:UIControlStateNormal];
-//    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-//    [button setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-//    [button setBackgroundImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
-//    [button setBackgroundImage:[UIImage imageNamed:highlightedImage] forState:UIControlStateHighlighted];
-//    button.size = button.currentBackgroundImage.size;
-//    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-//    return [[UIBarButtonItem alloc] initWithCustomView:button];
-//}
 @end

@@ -24,15 +24,29 @@
 #pragma -
 #pragma mark - private method
 - (void)initView{
-    self.font = [UIFont systemFontOfSize:15];
-    self.placeholderColor = [UIColor lightTextColor];
     
+    self.alwaysBounceVertical = YES;
+    self.font = [UIFont systemFontOfSize:15];
     //占位文字label
     UILabel *placeholderLabel = [[UILabel alloc] init];
     placeholderLabel.x = 5;
-    placeholderLabel.y = 8;
+    placeholderLabel.y = 6;
+    placeholderLabel.textColor = [UIColor lightGrayColor];
+    placeholderLabel.numberOfLines = 0;
     [self addSubview:placeholderLabel];
     self.placeholderLabel = placeholderLabel;
+    //监听通知
+    [LHQNotificationCenter addObserver:self selector:@selector(textChange) name:UITextViewTextDidChangeNotification object:nil];
+}
+
+- (void)dealloc{
+    [LHQNotificationCenter removeObserver:self];
+}
+
+
+- (void)textChange{
+    
+    self.placeholderLabel.hidden = self.hasText;
 }
 
 - (void)layoutSubviews{
@@ -42,5 +56,39 @@
     [self.placeholderLabel sizeToFit];
 }
 
+#pragma -
+#pragma mark - setter / getter
+- (void)setPlaceholder:(NSString *)placeholder{
+    _placeholder = [placeholder copy];
+    self.placeholderLabel.text = placeholder;
+    [self setNeedsLayout];
+}
+
+- (void)setPlaceholderColor:(UIColor *)placeholderColor{
+    _placeholderColor = placeholderColor;
+    self.placeholderLabel.textColor = placeholderColor;
+    [self setNeedsLayout];
+}
+
+- (void)setFont:(UIFont *)font{
+    [super setFont:font];
+    
+    self.placeholderLabel.font = font;
+    
+    [self setNeedsLayout];
+}
+
+- (void)setText:(NSString *)text{
+    
+    [super setText:text];
+    
+    [self textChange];
+}
+
+- (void)setAttributedText:(NSAttributedString *)attributedText{
+    
+    [super setAttributedText:attributedText];
+    [self textChange];;
+}
 
 @end

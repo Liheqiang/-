@@ -12,6 +12,4 @@
 
 + (instancetype)itemWithImage:(NSString *)image highlightedImage:(NSString *)highlightedImage target :(id)target action:(SEL)action;
 
-//+ (instancetype)itemWithTitle:(NSString *)title Image:(NSString *)image highlightedImage:(NSString *)highlightedImage target :(id)target action:(SEL)action;
-
 @end

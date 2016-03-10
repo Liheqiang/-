@@ -8,6 +8,8 @@
 
 #import "LHQTabBar.h"
 #import "LHQPublishView.h"
+#import "LHQNavigationController.h"
+#import "LHQPostTextViewController.h"
 
 @interface LHQTabBar()
 
@@ -72,7 +74,11 @@
 }
 
 - (void)publicButtonClick{
-    [LHQPublishView show];
+//    [LHQPublishView show];
+    UIViewController *root = [UIApplication sharedApplication].keyWindow.rootViewController;
+    LHQPostTextViewController *textViewVc = [[LHQPostTextViewController alloc] init];
+    LHQNavigationController *navi = [[LHQNavigationController alloc] initWithRootViewController:textViewVc];
+    [root presentViewController:navi animated:NO completion:nil];
 }
 
 @end

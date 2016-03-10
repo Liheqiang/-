@@ -8,6 +8,8 @@
 
 #import "LHQPublishView.h"
 #import "LHQVerticalButton.h"
+#import "LHQPostTextViewController.h"
+#import "LHQNavigationController.h"
 #import <POP.h>
 
 @interface LHQPublishView()
@@ -118,6 +120,7 @@ static UIWindow *window_;
 
 - (void)buttonClick:(UIButton *)button{
     
+    UITabBarController *tabBarVc = (UITabBarController *)[UIApplication sharedApplication].keyWindow.rootViewController;
     switch (button.tag) {
         case LHQPublishViewButtonTypeVideo:
             [self cancleWithCompletionBlock:^{
@@ -131,26 +134,28 @@ static UIWindow *window_;
             break;
         case LHQPublishViewButtonTypeText:
             [self cancleWithCompletionBlock:^{
-                LHQLog(@"发段子");
+                LHQPostTextViewController *textViewVc = [[LHQPostTextViewController alloc] init];
+                LHQNavigationController *navi = [[LHQNavigationController alloc] initWithRootViewController:textViewVc];
+                [tabBarVc presentViewController:navi animated:NO completion:nil];
             }];
             break;
-        case LHQPublishViewButtonTypeAudio:
-            [self cancleWithCompletionBlock:^{
-                LHQLog(@"发声音");
-            }];
-            break;
-        case LHQPublishViewButtonTypeReview:
-            [self cancleWithCompletionBlock:^{
-                LHQLog(@"审帖");
-            }];
-            break;
-        case LHQPublishViewButtonTypeOffline:
-            [self cancleWithCompletionBlock:^{
-                LHQLog(@"离线下载");
-            }];
-            break;
-        default:
-            break;
+//        case LHQPublishViewButtonTypeAudio:
+//            [self cancleWithCompletionBlock:^{
+//                LHQLog(@"发声音");
+//            }];
+//            break;
+//        case LHQPublishViewButtonTypeReview:
+//            [self cancleWithCompletionBlock:^{
+//                LHQLog(@"审帖");
+//            }];
+//            break;
+//        case LHQPublishViewButtonTypeOffline:
+//            [self cancleWithCompletionBlock:^{
+//                LHQLog(@"离线下载");
+//            }];
+//            break;
+//        default:
+//            break;
     }
     
 }

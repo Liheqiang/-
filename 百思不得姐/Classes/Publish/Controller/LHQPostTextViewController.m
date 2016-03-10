@@ -11,7 +11,7 @@
 #import "LHQPlaceholderTextView.h"
 
 @interface LHQPostTextViewController ()
-
+@property (nonatomic, strong) LHQPlaceholderTextView *textView;
 @end
 
 @implementation LHQPostTextViewController
@@ -25,13 +25,20 @@
 }
 
 - (void)setupNavi{
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:nil highlightedImage:nil target:self action:@selector(cancel)];
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:nil highlightedImage:nil target:self action:@selector(post)];
+    
+    self.title = @"发布文字";
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(cancle)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"发布" style:UIBarButtonItemStyleDone target:self action:@selector(post)];
+    self.navigationItem.rightBarButtonItem.enabled = NO;
 }
 
 - (void)setupTextView{
     LHQPlaceholderTextView *textView = [[LHQPlaceholderTextView alloc] init];
-    textView.placeholder = @"";
+    textView.placeholder = @"把好玩的图片，好笑的段子或糗事发到这里，接受千万网友膜拜吧！发布违反国家法律内容的，我们将依法提交给有关部门处理。";
+    textView.font = [UIFont systemFontOfSize:13];
+    textView.frame = self.view.bounds;
+    [self.view addSubview:textView];
+    self.textView = textView;
 }
 
 #pragma -
