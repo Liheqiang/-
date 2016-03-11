@@ -122,4 +122,8 @@
     
 }
 
++ (instancetype)viewLoadFromXib{
+    return [[[NSBundle mainBundle]loadNibNamed:NSStringFromClass(self) owner:nil options:nil]lastObject];
+}
+
 @end

@@ -30,3 +30,5 @@ UIKIT_EXTERN CGFloat const titleViewHeight;
 UIKIT_EXTERN CGFloat const hotCommentLabelHeight;
 /** tabBar选中的通知 */
 UIKIT_EXTERN NSString *const LHQTabBarDidSelectedNotification;
+/** 标签控制器中控件的间隙 */
+UIKIT_EXTERN  CGFloat const LHQTagMargin;

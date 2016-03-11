@@ -78,7 +78,7 @@
     UIViewController *root = [UIApplication sharedApplication].keyWindow.rootViewController;
     LHQPostTextViewController *textViewVc = [[LHQPostTextViewController alloc] init];
     LHQNavigationController *navi = [[LHQNavigationController alloc] initWithRootViewController:textViewVc];
-    [root presentViewController:navi animated:NO completion:nil];
+    [root presentViewController:navi animated:YES completion:nil];
 }
 
 @end

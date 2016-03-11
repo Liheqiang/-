@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LHQPostToolBar">
+            <rect key="frame" x="0.0" y="0.0" width="337" height="116"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z9T-Me-tEl" userLabel="工具条">
+                    <rect key="frame" x="0.0" y="81" width="337" height="35"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comment-bar-bg" translatesAutoresizingMaskIntoConstraints="NO" id="gWi-nu-dth" userLabel="背景">
+                            <rect key="frame" x="0.0" y="0.0" width="337" height="35"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCh-tN-kj0" userLabel="@">
+                            <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="JrX-Pb-T17"/>
+                            </constraints>
+                            <state key="normal" image="post-@"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AsB-zL-2XF" userLabel="#">
+                            <rect key="frame" x="35" y="0.0" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="agj-0P-P7F"/>
+                            </constraints>
+                            <state key="normal" image="post-#"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="gWi-nu-dth" secondAttribute="trailing" id="3OS-6H-WBf"/>
+                        <constraint firstAttribute="height" constant="35" id="4Wx-6s-XwD"/>
+                        <constraint firstAttribute="bottom" secondItem="NCh-tN-kj0" secondAttribute="bottom" id="9PK-w1-ZLV"/>
+                        <constraint firstItem="gWi-nu-dth" firstAttribute="top" secondItem="z9T-Me-tEl" secondAttribute="top" id="Aoj-Oz-oRa"/>
+                        <constraint firstItem="AsB-zL-2XF" firstAttribute="leading" secondItem="NCh-tN-kj0" secondAttribute="trailing" id="HAc-c2-Zvo"/>
+                        <constraint firstAttribute="bottom" secondItem="gWi-nu-dth" secondAttribute="bottom" id="Oh7-fL-4Fr"/>
+                        <constraint firstItem="AsB-zL-2XF" firstAttribute="top" secondItem="z9T-Me-tEl" secondAttribute="top" id="Uqv-lj-dsr"/>
+                        <constraint firstItem="NCh-tN-kj0" firstAttribute="top" secondItem="z9T-Me-tEl" secondAttribute="top" id="YXq-bZ-386"/>
+                        <constraint firstItem="NCh-tN-kj0" firstAttribute="leading" secondItem="z9T-Me-tEl" secondAttribute="leading" id="cUV-JF-3xY"/>
+                        <constraint firstAttribute="bottom" secondItem="AsB-zL-2XF" secondAttribute="bottom" id="gel-3z-4N1"/>
+                        <constraint firstItem="gWi-nu-dth" firstAttribute="leading" secondItem="z9T-Me-tEl" secondAttribute="leading" id="srt-lK-ful"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XjF-zV-CRV" userLabel="标签容器">
+                    <rect key="frame" x="0.0" y="0.0" width="337" height="81"/>
+                    <color key="backgroundColor" red="0.56675632009999999" green="0.87849342409999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="XjF-zV-CRV" secondAttribute="trailing" id="KwL-z9-SoS"/>
+                <constraint firstItem="XjF-zV-CRV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MYl-gz-13A"/>
+                <constraint firstItem="z9T-Me-tEl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MYo-qt-gXO"/>
+                <constraint firstAttribute="bottom" secondItem="z9T-Me-tEl" secondAttribute="bottom" id="N3d-Hl-pZr"/>
+                <constraint firstItem="z9T-Me-tEl" firstAttribute="top" secondItem="XjF-zV-CRV" secondAttribute="bottom" id="TzO-e9-aFL"/>
+                <constraint firstItem="XjF-zV-CRV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iDW-bO-6Sf"/>
+                <constraint firstAttribute="trailing" secondItem="z9T-Me-tEl" secondAttribute="trailing" id="rbc-gy-GnX"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="tagView" destination="XjF-zV-CRV" id="pvu-SF-y5m"/>
+            </connections>
+            <point key="canvasLocation" x="144.5" y="373"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="comment-bar-bg" width="320" height="49"/>
+        <image name="post-#" width="19" height="19"/>
+        <image name="post-@" width="19" height="19"/>
+    </resources>
+</document>

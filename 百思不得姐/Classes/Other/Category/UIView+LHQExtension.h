@@ -26,4 +26,6 @@
 @property (nonatomic, assign) CGSize size;
 
 - (BOOL)isShowingOnKeyWindow;
+
++ (instancetype)viewLoadFromXib;
 @end

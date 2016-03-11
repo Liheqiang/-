@@ -24,3 +24,5 @@ CGFloat const titleViewHeight = 30.0f;
 CGFloat const hotCommentLabelHeight = 20.0f;
 /** tabBar选中的通知 */
 NSString *const LHQTabBarDidSelectedNotification = @"LHQTabBarDidSelectedNotification";
+/** 标签控制器中控件的间隙 */
+CGFloat const LHQTagMargin = 5.0f;

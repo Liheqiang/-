@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2815DDF48572ED3A7BC165DE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 882DC51E7E0B05578F369262 /* libPods.a */; };
+		DB17FC161C9253A40089F60D /* LHQPostToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DB17FC151C9253A40089F60D /* LHQPostToolBar.m */; };
+		DB17FC181C9253B40089F60D /* LHQPostToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB17FC171C9253B40089F60D /* LHQPostToolBar.xib */; };
+		DB17FC1B1C9259750089F60D /* LHQAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB17FC1A1C9259750089F60D /* LHQAddTagViewController.m */; };
 		DB1BEB161C6F778D00F3FCA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1BEB151C6F778D00F3FCA7 /* main.m */; };
 		DB1BEB211C6F778D00F3FCA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB1BEB201C6F778D00F3FCA7 /* Assets.xcassets */; };
 		DB3CEAB31C8D6B5200F78EEC /* LHQTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEAAE1C8D6B5200F78EEC /* LHQTextField.m */; };
@@ -79,12 +82,18 @@
 		DBD4BF891C70142200687B65 /* LHQMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD4BF771C70142200687B65 /* LHQMeViewController.m */; };
 		DBD4BF8A1C70142200687B65 /* LHQNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD4BF7D1C70142200687B65 /* LHQNewViewController.m */; };
 		DBD4BF8B1C70142200687B65 /* UIView+LHQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD4BF831C70142200687B65 /* UIView+LHQExtension.m */; };
+		DBDFD98E1C927144005FE4F9 /* LHQTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDFD98D1C927144005FE4F9 /* LHQTagButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		84FD0210A2500FD8C5E0D18D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		882DC51E7E0B05578F369262 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D569280EC910BAE5C40F48C5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		DB17FC141C9253A40089F60D /* LHQPostToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQPostToolBar.h; sourceTree = "<group>"; };
+		DB17FC151C9253A40089F60D /* LHQPostToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQPostToolBar.m; sourceTree = "<group>"; };
+		DB17FC171C9253B40089F60D /* LHQPostToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LHQPostToolBar.xib; sourceTree = "<group>"; };
+		DB17FC191C9259750089F60D /* LHQAddTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQAddTagViewController.h; sourceTree = "<group>"; };
+		DB17FC1A1C9259750089F60D /* LHQAddTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQAddTagViewController.m; sourceTree = "<group>"; };
 		DB1BEB111C6F778D00F3FCA7 /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB1BEB151C6F778D00F3FCA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DB1BEB201C6F778D00F3FCA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -212,6 +221,8 @@
 		DBD4BF821C70142200687B65 /* UIView+LHQExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LHQExtension.h"; sourceTree = "<group>"; };
 		DBD4BF831C70142200687B65 /* UIView+LHQExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LHQExtension.m"; sourceTree = "<group>"; };
 		DBD4BF841C70142200687B65 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		DBDFD98C1C927144005FE4F9 /* LHQTagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQTagButton.h; sourceTree = "<group>"; };
+		DBDFD98D1C927144005FE4F9 /* LHQTagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQTagButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -347,6 +358,8 @@
 			children = (
 				DB3CEB4C1C914F8600F78EEC /* LHQPostTextViewController.h */,
 				DB3CEB4D1C914F8600F78EEC /* LHQPostTextViewController.m */,
+				DB17FC191C9259750089F60D /* LHQAddTagViewController.h */,
+				DB17FC1A1C9259750089F60D /* LHQAddTagViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -359,6 +372,11 @@
 				DB3CEB431C913D0700F78EEC /* LHQPublishView.xib */,
 				DB3CEB491C91481D00F78EEC /* LHQPlaceholderTextView.h */,
 				DB3CEB4A1C91481D00F78EEC /* LHQPlaceholderTextView.m */,
+				DB17FC141C9253A40089F60D /* LHQPostToolBar.h */,
+				DB17FC151C9253A40089F60D /* LHQPostToolBar.m */,
+				DB17FC171C9253B40089F60D /* LHQPostToolBar.xib */,
+				DBDFD98C1C927144005FE4F9 /* LHQTagButton.h */,
+				DBDFD98D1C927144005FE4F9 /* LHQTagButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -742,6 +760,7 @@
 				DB6FBC951C71719700FD12B5 /* LHQRecommandCategoryCell.xib in Resources */,
 				DB6B2D721C83E13400B39E24 /* LHQTopicPictureView.xib in Resources */,
 				DB1BEB211C6F778D00F3FCA7 /* Assets.xcassets in Resources */,
+				DB17FC181C9253B40089F60D /* LHQPostToolBar.xib in Resources */,
 				DB7EC0301C744E610012AD13 /* LHQLoginViewController.xib in Resources */,
 				DB3CEB2F1C90599F00F78EEC /* LHQWebViewController.xib in Resources */,
 			);
@@ -812,6 +831,7 @@
 				DB6FBC861C701BB500FD12B5 /* UIBarButtonItem+LHQExtension.m in Sources */,
 				DB3CEAB31C8D6B5200F78EEC /* LHQTextField.m in Sources */,
 				DB7EBFFB1C736C130012AD13 /* LHQRecommandTagsViewController.m in Sources */,
+				DB17FC161C9253A40089F60D /* LHQPostToolBar.m in Sources */,
 				DBD4BF871C70142200687B65 /* LHQFriendTrendsViewController.m in Sources */,
 				DB3CEB2E1C90599F00F78EEC /* LHQWebViewController.m in Sources */,
 				DBCDD18C1C84543C00F1452C /* LHQShowPictureViewController.m in Sources */,
@@ -823,6 +843,7 @@
 				DB3CEAB51C8D6B5200F78EEC /* LHQVerticalButton.m in Sources */,
 				DB3CEB3B1C9059D300F78EEC /* LHQMeCell.m in Sources */,
 				DB6B2D1B1C7B3A7400B39E24 /* NSDate+LHQExtension.m in Sources */,
+				DB17FC1B1C9259750089F60D /* LHQAddTagViewController.m in Sources */,
 				DB7EC05B1C75B0500012AD13 /* LHQAllViewController.m in Sources */,
 				DB7EC05F1C75B0500012AD13 /* LHQVoiceViewController.m in Sources */,
 				DB3CEB3D1C9059D300F78EEC /* LHQSquareButton.m in Sources */,
@@ -839,6 +860,7 @@
 				DB6FBC941C71719700FD12B5 /* LHQRecommandCategoryCell.m in Sources */,
 				DB6FBC9D1C71785C00FD12B5 /* LHQRecommandCategory.m in Sources */,
 				DB3CEAB81C8D6B6900F78EEC /* LHQTopWindowViewController.m in Sources */,
+				DBDFD98E1C927144005FE4F9 /* LHQTagButton.m in Sources */,
 				DB3CEB441C913D0700F78EEC /* LHQPublishView.m in Sources */,
 				DBD4BF861C70142200687B65 /* LHQEssenceViewController.m in Sources */,
 			);
