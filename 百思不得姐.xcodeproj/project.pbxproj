@@ -83,6 +83,7 @@
 		DBD4BF8A1C70142200687B65 /* LHQNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD4BF7D1C70142200687B65 /* LHQNewViewController.m */; };
 		DBD4BF8B1C70142200687B65 /* UIView+LHQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD4BF831C70142200687B65 /* UIView+LHQExtension.m */; };
 		DBDFD98E1C927144005FE4F9 /* LHQTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDFD98D1C927144005FE4F9 /* LHQTagButton.m */; };
+		DBDFD9911C93A306005FE4F9 /* LHQTagTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDFD9901C93A306005FE4F9 /* LHQTagTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -223,6 +224,8 @@
 		DBD4BF841C70142200687B65 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		DBDFD98C1C927144005FE4F9 /* LHQTagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQTagButton.h; sourceTree = "<group>"; };
 		DBDFD98D1C927144005FE4F9 /* LHQTagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQTagButton.m; sourceTree = "<group>"; };
+		DBDFD98F1C93A306005FE4F9 /* LHQTagTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQTagTextField.h; sourceTree = "<group>"; };
+		DBDFD9901C93A306005FE4F9 /* LHQTagTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQTagTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,6 +380,8 @@
 				DB17FC171C9253B40089F60D /* LHQPostToolBar.xib */,
 				DBDFD98C1C927144005FE4F9 /* LHQTagButton.h */,
 				DBDFD98D1C927144005FE4F9 /* LHQTagButton.m */,
+				DBDFD98F1C93A306005FE4F9 /* LHQTagTextField.h */,
+				DBDFD9901C93A306005FE4F9 /* LHQTagTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -846,6 +851,7 @@
 				DB17FC1B1C9259750089F60D /* LHQAddTagViewController.m in Sources */,
 				DB7EC05B1C75B0500012AD13 /* LHQAllViewController.m in Sources */,
 				DB7EC05F1C75B0500012AD13 /* LHQVoiceViewController.m in Sources */,
+				DBDFD9911C93A306005FE4F9 /* LHQTagTextField.m in Sources */,
 				DB3CEB3D1C9059D300F78EEC /* LHQSquareButton.m in Sources */,
 				DB6B2D6A1C7FEC4C00B39E24 /* LHQBaseTopicViewController.m in Sources */,
 				DB3CEB4B1C91481D00F78EEC /* LHQPlaceholderTextView.m in Sources */,

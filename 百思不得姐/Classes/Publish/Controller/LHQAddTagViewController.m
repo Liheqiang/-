@@ -7,13 +7,14 @@
 //
 
 #import "LHQAddTagViewController.h"
+#import "LHQTagTextField.h"
 #import "LHQTagButton.h"
 
 static CGFloat const addButtonHeight = 30.0f;
 
-@interface LHQAddTagViewController ()
+@interface LHQAddTagViewController ()<UITextFieldDelegate>
 @property (nonatomic, weak) UIView *contentView;
-@property (nonatomic, weak) UITextField *textField;
+@property (nonatomic, weak) LHQTagTextField *textField;
 @property (nonatomic, weak) UIButton *addButton;
 @property (nonatomic, strong) NSMutableArray *tagButtons;
 @end
@@ -74,14 +75,24 @@ static CGFloat const addButtonHeight = 30.0f;
 }
 
 - (void)setupTextField{
-    UITextField *textField = [[UITextField alloc] init];
+    LHQTagTextField *textField = [[LHQTagTextField alloc] init];
     [textField addTarget:self action:@selector(textDidChange:) forControlEvents:UIControlEventEditingChanged];
     textField.placeholder = @"多个标签用逗号或者换行隔开";
     [textField setValue:[UIColor lightGrayColor] forKeyPath:@"_placeholderLabel.textColor"];
     [textField sizeToFit];
+    textField.delegate = self;
     [textField becomeFirstResponder];
     textField.x = LHQTagMargin;
     textField.y  =LHQTagMargin;
+    
+    __weak typeof(self) weakSelf = self;
+    textField.deleteBlock = ^{
+        if (!weakSelf.textField.hasText) {
+            LHQTagButton *lastTagButton = [weakSelf.tagButtons lastObject];
+            
+            [weakSelf tagButtonClick:lastTagButton];
+        }
+    };
     textField.font = [UIFont systemFontOfSize:15];
     [self.contentView addSubview:textField];
     self.textField = textField;
@@ -95,20 +106,27 @@ static CGFloat const addButtonHeight = 30.0f;
         [self.addButton setTitle:text forState:UIControlStateNormal];
         self.addButton.y = CGRectGetMaxY(textField.frame) + LHQTagMargin;
         
+        text = textField.text;
+        NSUInteger length = textField.text.length - 1;
+        
+        NSString *lastCharacter = [text substringFromIndex:length];
+        if (([lastCharacter isEqualToString:@","] || [lastCharacter isEqualToString:@"，"]) && length > 1) {
+            
+            textField.text = [text substringToIndex:length];
+            [self addButtonClick];
+        }
+        
     }
     else{
         self.addButton.hidden = YES;
         
     }
     
-    NSString *text = self.textField.text;
-    NSUInteger length = self.textField.text.length - 1;
-    
-    NSString *lastCharacter = [text substringFromIndex:length];
-    if ([lastCharacter isEqualToString:@","] || [lastCharacter isEqualToString:@"，"]) {
-        [self addButtonClick];
-    }
     [self updateTextFieldFrame];
+    
+}
+
+- (void)dealloc{
     
 }
 
@@ -125,9 +143,12 @@ static CGFloat const addButtonHeight = 30.0f;
     [self.contentView addSubview:tagButton];
     [self.tagButtons addObject:tagButton];
     
+    WeakSelf
     //更新子控件的frame
-    [self updateTagButtonFrame];
-    [self updateTextFieldFrame];
+    [UIView animateWithDuration:0.25 animations:^{
+        [weakSelf updateTagButtonFrame];
+        [weakSelf updateTextFieldFrame];
+    }];
     
     //隐藏添加按钮
     self.addButton.hidden = YES;
@@ -144,10 +165,8 @@ static CGFloat const addButtonHeight = 30.0f;
     
     WeakSelf
     //更新子控件的frame
-    [UIView animateWithDuration:0.25 animations:^{
-        [weakSelf updateTagButtonFrame];
-        [weakSelf updateTextFieldFrame];
-    }];
+    [weakSelf updateTagButtonFrame];
+    [weakSelf updateTextFieldFrame];
 }
 
 #pragma -
@@ -186,7 +205,7 @@ static CGFloat const addButtonHeight = 30.0f;
     //右边的宽度
     CGFloat rightWidth = self.contentView.width - leftWidth;
     
-    if(rightWidth > self.textField.width){
+    if(rightWidth > [self textFieldTextWidth]){
         self.textField.x = CGRectGetMaxX(lastTagButton.frame) + LHQTagMargin;
         self.textField.y = lastTagButton.y;
     }else{
@@ -195,4 +214,22 @@ static CGFloat const addButtonHeight = 30.0f;
     }
     
 }
+#pragma -
+#pragma mark - UITextField delegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    
+    if (!textField.hasText)return NO;
+    [self addButtonClick];
+    return YES;
+}
+
+/**
+ *  返回输入文字宽度
+ */
+- (CGFloat)textFieldTextWidth{
+    
+    CGFloat textW = [self.textField.text sizeWithAttributes:@{NSFontAttributeName:self.textField.font}].width;
+    return MAX(100, textW);
+}
+
 @end
