@@ -7,6 +7,7 @@
 //
 
 #import "LHQMeViewController.h"
+#import "LHQSettingViewController.h"
 #import "LHQMeFooterView.h"
 #import "LHQMeCell.h"
 
@@ -59,7 +60,8 @@ static NSString *const meCellId = @"me";
 #pragma -
 #pragma mark - event response -
 - (void)settingItemClick{
-    
+    LHQSettingViewController *settingVc = [[LHQSettingViewController alloc] initWithStyle:UITableViewStyleGrouped];//group样式没有分割线
+    [self.navigationController pushViewController:settingVc animated:YES];
 }
 
 - (void)moonItemClick{

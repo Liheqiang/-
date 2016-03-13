@@ -84,6 +84,7 @@
 		DBD4BF8B1C70142200687B65 /* UIView+LHQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD4BF831C70142200687B65 /* UIView+LHQExtension.m */; };
 		DBDFD98E1C927144005FE4F9 /* LHQTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDFD98D1C927144005FE4F9 /* LHQTagButton.m */; };
 		DBDFD9911C93A306005FE4F9 /* LHQTagTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDFD9901C93A306005FE4F9 /* LHQTagTextField.m */; };
+		DBDFD9941C954E3C005FE4F9 /* LHQSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDFD9931C954E3C005FE4F9 /* LHQSettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -226,6 +227,8 @@
 		DBDFD98D1C927144005FE4F9 /* LHQTagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQTagButton.m; sourceTree = "<group>"; };
 		DBDFD98F1C93A306005FE4F9 /* LHQTagTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQTagTextField.h; sourceTree = "<group>"; };
 		DBDFD9901C93A306005FE4F9 /* LHQTagTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQTagTextField.m; sourceTree = "<group>"; };
+		DBDFD9921C954E3C005FE4F9 /* LHQSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHQSettingViewController.h; sourceTree = "<group>"; };
+		DBDFD9931C954E3C005FE4F9 /* LHQSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHQSettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -622,6 +625,8 @@
 				DBD4BF771C70142200687B65 /* LHQMeViewController.m */,
 				DB3CEB2B1C90599F00F78EEC /* LHQWebViewController.h */,
 				DB3CEB2C1C90599F00F78EEC /* LHQWebViewController.m */,
+				DBDFD9921C954E3C005FE4F9 /* LHQSettingViewController.h */,
+				DBDFD9931C954E3C005FE4F9 /* LHQSettingViewController.m */,
 				DB3CEB2D1C90599F00F78EEC /* LHQWebViewController.xib */,
 			);
 			path = Controller;
@@ -835,6 +840,7 @@
 				DB6FBCA01C71AA0D00FD12B5 /* LHQRecommandUser.m in Sources */,
 				DB6FBC861C701BB500FD12B5 /* UIBarButtonItem+LHQExtension.m in Sources */,
 				DB3CEAB31C8D6B5200F78EEC /* LHQTextField.m in Sources */,
+				DBDFD9941C954E3C005FE4F9 /* LHQSettingViewController.m in Sources */,
 				DB7EBFFB1C736C130012AD13 /* LHQRecommandTagsViewController.m in Sources */,
 				DB17FC161C9253A40089F60D /* LHQPostToolBar.m in Sources */,
 				DBD4BF871C70142200687B65 /* LHQFriendTrendsViewController.m in Sources */,

@@ -100,7 +100,6 @@ static NSString *const cellId = @"topic";
 
 - (void)tabBarSelect{
     
-    LHQLog(@"%zd,,,%zd,%d",self.tabBarController.selectedIndex,self.lastSelectedIndex,self.tableView.isShowingOnKeyWindow);
     if (self.tabBarController.selectedIndex == self.lastSelectedIndex && self.view.isShowingOnKeyWindow){
         [self.tableView.mj_header beginRefreshing];
     }
