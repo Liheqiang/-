@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface LHQAddTagViewController : UIViewController
-
+@property (nonatomic, copy) void (^tagsBlock)(NSArray *tags);
+@property (nonatomic, strong) NSArray *tags;
 @end

@@ -48,14 +48,14 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XjF-zV-CRV" userLabel="标签容器">
-                    <rect key="frame" x="0.0" y="0.0" width="337" height="81"/>
-                    <color key="backgroundColor" red="0.56675632009999999" green="0.87849342409999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="5" y="0.0" width="327" height="81"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="XjF-zV-CRV" secondAttribute="trailing" id="KwL-z9-SoS"/>
-                <constraint firstItem="XjF-zV-CRV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MYl-gz-13A"/>
+                <constraint firstAttribute="trailing" secondItem="XjF-zV-CRV" secondAttribute="trailing" constant="5" id="KwL-z9-SoS"/>
+                <constraint firstItem="XjF-zV-CRV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="MYl-gz-13A"/>
                 <constraint firstItem="z9T-Me-tEl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MYo-qt-gXO"/>
                 <constraint firstAttribute="bottom" secondItem="z9T-Me-tEl" secondAttribute="bottom" id="N3d-Hl-pZr"/>
                 <constraint firstItem="z9T-Me-tEl" firstAttribute="top" secondItem="XjF-zV-CRV" secondAttribute="bottom" id="TzO-e9-aFL"/>

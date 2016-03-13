@@ -13,8 +13,8 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         [self setImage:[UIImage imageNamed:@"chose_tag_close_icon"] forState:UIControlStateNormal];
-        self.backgroundColor = LHQRGB(137, 218, 250);
-        self.titleLabel.font =[UIFont systemFontOfSize:15];
+        self.backgroundColor = LHQTagBg;
+        self.titleLabel.font = LHQTagFont;
     }
     return self;
 }

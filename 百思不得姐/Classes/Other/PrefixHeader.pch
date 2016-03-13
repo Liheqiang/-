@@ -33,6 +33,8 @@
 #define kScreenHeight [[UIScreen mainScreen] bounds].size.height
 #define kScreenCenter CGPointMake(kScreenWidth / 2, kScreenHeight / 2)
 #define LHQNotificationCenter [NSNotificationCenter defaultCenter]
+#define LHQTagBg LHQRGB(137, 218, 250)
+#define LHQTagFont [UIFont systemFontOfSize:15]
 
 #define LHQLogFun LHQLog(@"%s",__func__);
 

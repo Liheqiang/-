@@ -62,6 +62,13 @@ static CGFloat const addButtonHeight = 30.0f;
 
 - (void)done{
     
+    NSMutableArray *tags = [NSMutableArray array];
+    for (LHQTagButton *tagButton in self.tagButtons) {
+        [tags addObject:tagButton.currentTitle];
+    }
+    !self.tagsBlock ? :self.tagsBlock(tags);
+    [self.navigationController popViewControllerAnimated:YES];
+    
 }
 
 - (void)setupContentView{
@@ -96,6 +103,12 @@ static CGFloat const addButtonHeight = 30.0f;
     textField.font = [UIFont systemFontOfSize:15];
     [self.contentView addSubview:textField];
     self.textField = textField;
+    
+    //设置默认标签
+    for (NSString *tagTitle in self.tags) {
+        textField.text = tagTitle;
+        [self addButtonClick];
+    }
 }
 
 - (void)textDidChange:(UITextField *)textField{
