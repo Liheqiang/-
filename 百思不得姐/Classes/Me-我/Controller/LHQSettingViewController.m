@@ -37,6 +37,11 @@
         
         NSString *filePath = [cachesPath stringByAppendingPathComponent:fileName];
         NSDictionary *attrs = [LHQFileManager attributesOfItemAtPath:filePath error:nil];
+        //判断文件类型
+        BOOL dir = NO;
+        [LHQFileManager fileExistsAtPath:filePath isDirectory:&dir];
+        if (dir) continue;
+        
         NSUInteger size = [attrs[NSFileSize] unsignedIntegerValue];
         
         totalSize += size;
